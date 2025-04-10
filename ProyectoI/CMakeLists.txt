@@ -3,4 +3,4 @@ project(ProyectoI)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ProyectoI main.cpp)
+add_executable(ProyectoI main.cpp Contenedor.h Nodo.h)
