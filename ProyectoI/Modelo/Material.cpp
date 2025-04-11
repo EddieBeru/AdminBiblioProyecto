@@ -64,3 +64,8 @@ void Material::set_estado_material(const std::string &estado_material) {
     estadoMaterial = estado_material;
 }
 
+//Sobrecarga del operador de salida
+std::ostream & operator<<(std::ostream &os, const Material &obj) {
+    return os << obj.imprimir();
+}
+

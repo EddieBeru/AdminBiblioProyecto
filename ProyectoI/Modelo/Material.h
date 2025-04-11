@@ -45,18 +45,16 @@ public:
     void set_estado_material(const std::string &estado_material);
 
     //Metodos virtuales
-    virtual std::string getTipo() const = 0; // Método virtual puro para obtener el tipo de material
-    virtual int getDuracionPrestamo() const = 0; // Método virtual puro para obtener la duración del préstamo, se va a trabajar en dias.
+    virtual std::string getTipo() const = 0; //Metodo virtual puro para obtener el tipo de material
+    virtual int getDuracionPrestamo() const = 0; //Metodo virtual puro para obtener la duracion del prestamo, se va a trabajar por dias
 
-    friend std::ostream & operator<<(std::ostream &os, const Material &obj) {
-        return os
-               << "numClasificacion: " << obj.numClasificacion
-               << " numCatalogo: " << obj.numCatalogo
-               << " autores: " << obj.autores
-               << " palabrasClave: " << obj.palabrasClave
-               << " tipoMaterial: " << obj.tipoMaterial
-               << " estadoMaterial: " << obj.estadoMaterial;
-    }
+    //Sobre carga del operador de salida, y metodo para imprimir el objeto
+    friend std::ostream & operator<<(std::ostream &os, const Material &obj);
+
+    //Metodo virtual puro para imprimir el objeto, asi se evita repetir
+    //la sobrecarga del operador de salida en cada clase hija
+    virtual std::string imprimir() const = 0;
+
 };
 
 
