@@ -11,6 +11,6 @@
 -- Check for working CXX compiler: E:/CLion/CLion 2024.3.5/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (3.0s)
+-- Configuring done (1.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: E:/CLion/AdminBiblioProyecto/ProyectoI/cmake-build-debug
