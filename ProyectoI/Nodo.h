@@ -1,6 +1,3 @@
-//
-// Created by hanse on 2025-03-29.
-//
 
 #ifndef NODO_H
 #define NODO_H
@@ -9,7 +6,7 @@
 
 template <class T>
 class Nodo {
-    private:
+private:
     T item;
     Nodo<T>* sig;
 public:
