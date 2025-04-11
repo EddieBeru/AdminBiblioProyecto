@@ -3,4 +3,5 @@ project(ProyectoI)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ProyectoI main.cpp Contenedor.h Nodo.h Material.h)
+add_executable(ProyectoI main.cpp Contenedor.h Nodo.h Modelo/Material.h
+        /Modelo/Libro.h Modelo/Revista.h)
