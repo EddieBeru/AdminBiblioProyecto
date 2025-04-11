@@ -1,4 +1,4 @@
-# Install script for directory: E:/CLion/ProyectoI
+# Install script for directory: E:/CLion/AdminBiblioProyecto/ProyectoI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "E:/CLion/ProyectoI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "E:/CLion/AdminBiblioProyecto/ProyectoI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
