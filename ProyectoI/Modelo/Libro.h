@@ -5,9 +5,25 @@
 #ifndef LIBRO_H
 #define LIBRO_H
 
+#include "Material.h"
 
+class Libro: public Material {
+private:
+    std::string ubicacion;
 
-class Libro {
+public:
+    Libro(const int numClasificacion, const int numCatalogo, const std::string &autores,
+          const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
+          const std::string &ubicacion = "");
+
+    ~Libro() override;
+
+    std::string get_ubicacion() const;
+
+    void set_ubicacion(const std::string &ubicacion);
+
+    std::string getTipo() const override;
+    int getDuracionPrestamo() const override;
 
 };
 

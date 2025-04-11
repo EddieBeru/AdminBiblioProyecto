@@ -5,14 +5,13 @@
 #include "Material.h"
 
 //Definicion del constructor con valores por defecto
-Material::Material(int numClasificacion = 0, int numCatalogo = 0, std::string autores = "", std::string palabrasClave = "",
-         std::string tipoMaterial = "", std::string estadoMaterial = "") {
-    this->numClasificacion = numClasificacion;
-    this->numCatalogo = numCatalogo;
-    this->autores = autores;
-    this->palabrasClave = palabrasClave;
-    this->tipoMaterial = tipoMaterial;
-    this->estadoMaterial = estadoMaterial;
+Material::Material(const int numClasificacion, const int numCatalogo, const std::string &autores, const std::string &palabrasClave,
+        const std::string &tipoMaterial, const std::string &estadoMaterial)
+        :numClasificacion(numClasificacion),
+        numCatalogo(numCatalogo), autores(autores), palabrasClave(palabrasClave), tipoMaterial(tipoMaterial), estadoMaterial(estadoMaterial) {
+}
+
+Material::~Material() {
 }
 
 //Setters y Getters

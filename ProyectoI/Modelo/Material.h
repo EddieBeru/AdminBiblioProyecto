@@ -20,10 +20,10 @@ protected:
     std::string estadoMaterial;
 public:
     // Constructor
-    Material(int numClasificacion , int numCatalogo , std::string autores , std::string palabrasClave,
-             std::string tipoMaterial , std::string estadoMaterial);
+    Material(const int numClasificacion = 0, const int numCatalogo = 0, const std::string &autores = "", const std::string &palabrasClave = "",
+         const std::string &tipoMaterial = "", const std::string &estadoMaterial = "");
     // Destructor
-    virtual ~Material() = default;
+    virtual ~Material();
 
     //setters y getters
     int get_num_clasificacion() const;
@@ -47,6 +47,7 @@ public:
     //Metodos virtuales
     virtual std::string getTipo() const = 0; //Metodo virtual puro para obtener el tipo de material
     virtual int getDuracionPrestamo() const = 0; //Metodo virtual puro para obtener la duracion del prestamo, se va a trabajar por dias
+
 
     //Sobre carga del operador de salida, y metodo para imprimir el objeto
     friend std::ostream & operator<<(std::ostream &os, const Material &obj);
