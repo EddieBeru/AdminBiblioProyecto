@@ -25,6 +25,8 @@ public:
     std::string getTipo() const override;
     int getDuracionPrestamo() const override;
 
+    std::string imprimir() const override;
+
 };
 
 

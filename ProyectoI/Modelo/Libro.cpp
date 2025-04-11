@@ -29,3 +29,10 @@ std::string Libro::get_ubicacion() const {
 void Libro::set_ubicacion(const std::string &ubicacion) {
     this->ubicacion = ubicacion;
 }
+
+std::string Libro::imprimir() const {
+    return "Libro: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " +
+           autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion;
+}
+
+
