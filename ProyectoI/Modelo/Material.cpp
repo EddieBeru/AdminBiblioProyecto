@@ -88,11 +88,19 @@ std::ostream & operator<<(std::ostream &os, const Material &obj) {
 bool operator<(const Material &a, const Material &b){
     return a.get_titulo() < b.get_titulo();
 }
-/*
-bool operator<=(const Material &a, const Material &b);
-bool operator>(const Material &a, const Material &b);
-bool operator>=(const Material &a, const Material &b);
-bool operator==(const Material &a, const Material &b);
-bool operator!=(const Material &a, const Material &b);
 
- */
+bool operator<=(const Material& a, const Material& b) {
+	return a.get_titulo() <= b.get_titulo();
+}
+bool operator>(const Material& a, const Material& b) {
+	return a.get_titulo() > b.get_titulo();
+}
+bool operator>=(const Material& a, const Material& b) {
+	return a.get_titulo() >= b.get_titulo();
+}
+bool operator==(const Material& a, const Material& b) {
+	return a.get_titulo() == b.get_titulo();
+}
+bool operator!=(const Material& a, const Material& b) {
+	return a.get_titulo() != b.get_titulo();
+}

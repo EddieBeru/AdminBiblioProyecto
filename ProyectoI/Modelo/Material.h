@@ -67,13 +67,13 @@ public:
     virtual std::string imprimir() const = 0;
 
     friend bool operator<(const Material &a, const Material &b);
-    /*
+    
     friend bool operator<=(const Material &a, const Material &b);
     friend bool operator>(const Material &a, const Material &b);
     friend bool operator>=(const Material &a, const Material &b);
     friend bool operator==(const Material &a, const Material &b);
     friend bool operator!=(const Material &a, const Material &b);
-    */
+    
 };
 
 #endif //MATERIAL_H
