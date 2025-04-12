@@ -1,0 +1,11 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/.vs/AdminBiblioProyecto/CopilotIndices/17.13.444.19527
+/.vs/AdminBiblioProyecto/FileContentIndex
+/.vs/AdminBiblioProyecto/v17
+/ProyectoI/out/build/x64-Debug
+/.vs/slnx.sqlite
+/.vs/ProyectoI/VSWorkspaceState.json
+/.vs
