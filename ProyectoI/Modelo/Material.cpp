@@ -5,10 +5,20 @@
 #include "Material.h"
 
 //Definicion del constructor con valores por defecto
-Material::Material(const int numClasificacion, const int numCatalogo, const std::string &autores, const std::string &palabrasClave,
-        const std::string &tipoMaterial, const std::string &estadoMaterial)
-        :numClasificacion(numClasificacion),
-        numCatalogo(numCatalogo), autores(autores), palabrasClave(palabrasClave), tipoMaterial(tipoMaterial), estadoMaterial(estadoMaterial) {
+Material::Material(const int numClasificacion,
+                   const int numCatalogo,
+                   const std::string &titulo,
+                   const std::string &autores,
+                   const std::string &palabrasClave,
+                   const std::string &tipoMaterial,
+                   const std::string &estadoMaterial)
+    :numClasificacion(numClasificacion),
+      numCatalogo(numCatalogo),
+      titulo(titulo),
+      autores(autores),
+      palabrasClave(palabrasClave),
+      tipoMaterial(tipoMaterial),
+      estadoMaterial(estadoMaterial) {
 }
 
 Material::~Material() {
@@ -29,6 +39,13 @@ int Material::get_num_catalogo() const {
 
 void Material::set_num_catalogo(const int num_catalogo) {
     numCatalogo = num_catalogo;
+}
+
+std::string Material::get_titulo() const {
+  return titulo;
+}
+void Material::set_titulo(const std::string &titulo){
+  this->titulo = titulo;
 }
 
 std::string Material::get_autores() const {
@@ -68,3 +85,14 @@ std::ostream & operator<<(std::ostream &os, const Material &obj) {
     return os << obj.imprimir();
 }
 
+bool operator<(const Material &a, const Material &b){
+    return a.get_titulo() < b.get_titulo();
+}
+/*
+bool operator<=(const Material &a, const Material &b);
+bool operator>(const Material &a, const Material &b);
+bool operator>=(const Material &a, const Material &b);
+bool operator==(const Material &a, const Material &b);
+bool operator!=(const Material &a, const Material &b);
+
+ */

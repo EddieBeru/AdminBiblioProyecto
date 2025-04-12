@@ -12,9 +12,14 @@ private:
     std::string ubicacion;
 
 public:
-    Libro(const int numClasificacion, const int numCatalogo, const std::string &autores,
-          const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
-          const std::string &ubicacion = "");
+    Libro(const int numClasificacion,
+        const int numCatalogo,
+        const std::string &titulo,
+        const std::string &autores,
+        const std::string &palabrasClave,
+        const std::string &tipoMaterial,
+        const std::string &estadoMaterial,
+        const std::string &ubicacion = "");
 
     ~Libro() override;
 

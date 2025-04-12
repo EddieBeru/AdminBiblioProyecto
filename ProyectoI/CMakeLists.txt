@@ -18,4 +18,5 @@ add_executable(ProyectoI main.cpp
         Modelo/Fisico.h
         Modelo/EnLinea.cpp
         Modelo/EnLinea.h
+        mainPruebas.cpp
 )
