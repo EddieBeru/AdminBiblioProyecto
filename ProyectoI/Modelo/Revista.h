@@ -14,9 +14,9 @@ private:
     int numero;
     int volumen;
     public:
-    Revista(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
-        const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
-        const string &ubicacion, int numero, int volumen)
+    Revista(int numClasificacion = 0, int numCatalogo = 0, const std::string &titulo = "", const std::string &autores = "",
+        const std::string &palabrasClave = "", const std::string &tipoMaterial = "", const std::string &estadoMaterial = "",
+        const string &ubicacion = "", int numero = 0, int volumen = 0)
         : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
           ubicacion(ubicacion),
           numero(numero),
