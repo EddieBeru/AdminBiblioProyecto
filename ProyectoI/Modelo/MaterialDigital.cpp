@@ -21,6 +21,6 @@ string MaterialDigital::getTipo() const {
 }
 
 string MaterialDigital::imprimir() const {
-    return "Material Digital: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " +
+    return "Material Digital: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
            autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + tipoFormato;
 }
