@@ -6,14 +6,16 @@
 #define MATERIALDIGITAL_H
 
 #include "Material.h"
+using namespace std;
 
 class MaterialDigital : public Material {
 private:
     string tipoFormato;
     public:
-    MaterialDigital(int numClasificacion, int numCatalogo, const std::string &autores, const std::string &palabrasClave,
-        const std::string &tipoMaterial, const std::string &estadoMaterial, const string &tipo_formato)
-        : Material(numClasificacion, numCatalogo, autores, palabrasClave, tipoMaterial, estadoMaterial),
+    MaterialDigital(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
+        const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
+        const string &tipo_formato)
+        : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
           tipoFormato(tipo_formato) {
     }
 
