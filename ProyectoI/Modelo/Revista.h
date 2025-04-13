@@ -1,14 +1,44 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #ifndef REVISTA_H
 #define REVISTA_H
 
+#include "Material.h"
 
+class Revista : public Material {
+private:
+    string ubicacion;
+    int numero;
+    int volumen;
+    public:
+    Revista(int numClasificacion, int numCatalogo, const std::string &autores, const std::string &palabrasClave,
+        const std::string &tipoMaterial, const std::string &estadoMaterial, const string &ubicacion, int numero,
+        int volumen)
+        : Material(numClasificacion, numCatalogo, autores, palabrasClave, tipoMaterial, estadoMaterial),
+          ubicacion(ubicacion),
+          numero(numero),
+          volumen(volumen) {
+    }
 
-class Revista {
+    string get_ubicacion() const;
 
+    void set_ubicacion(const string &ubicacion);
+
+    int get_numero() const;
+
+    void set_numero(int numero);
+
+    int get_volumen() const;
+
+    void set_volumen(int volumen);
+
+    //metodos virtuales puros siendo heredos de clase padre
+    virtual int getDuracionPrestamo() const override;
+    virtual string getTipo() const override;
+
+    virtual string imprimir() const override;
 };
 
 
