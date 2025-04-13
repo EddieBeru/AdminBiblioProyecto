@@ -6,6 +6,7 @@
 #define REVISTA_H
 
 #include "Material.h"
+using namespace std;
 
 class Revista : public Material {
 private:
@@ -13,10 +14,10 @@ private:
     int numero;
     int volumen;
     public:
-    Revista(int numClasificacion, int numCatalogo, const std::string &autores, const std::string &palabrasClave,
-        const std::string &tipoMaterial, const std::string &estadoMaterial, const string &ubicacion, int numero,
-        int volumen)
-        : Material(numClasificacion, numCatalogo, autores, palabrasClave, tipoMaterial, estadoMaterial),
+    Revista(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
+        const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
+        const string &ubicacion, int numero, int volumen)
+        : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
           ubicacion(ubicacion),
           numero(numero),
           volumen(volumen) {
