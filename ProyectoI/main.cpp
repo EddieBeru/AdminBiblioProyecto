@@ -5,7 +5,19 @@
 #include "Contenedor.h"
 
 int main() {
-
+	/*
+ Libro libro(12345, 67890, "ejemplo titulo","Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+    Revista revista(12345, 67890, "ejemplo titulo","autor ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ubicacion ejenplo", 1, 1);
+    MaterialDigital mdigital(12345, 67890,"ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ejemplo formato");
+    Fisico fisico(12345, 67890,"ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ejemplo formato", "estilo ejemplo");
+    EnLinea enlinea(12345, 67890,"ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ejemplo formato", true);
+    std::cout << libro << std::endl;
+    std::cout << revista << std::endl;
+    std::cout << mdigital << std::endl;
+    std::cout << fisico << std::endl;
+    std::cout << enlinea << std::endl;
+    std::cout << enlinea.getDuracionPrestamo() << std::endl;
+    */
     Libro* p = new Libro(111, 1, "Don Quijote", "", "", "", "", "");
     std::cout << *p << std::endl;
     Libro* p2 = new Libro(21, 1, "El Principito", "", "", "", "", "");
