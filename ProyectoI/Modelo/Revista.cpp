@@ -37,6 +37,6 @@ string Revista::getTipo() const {
 }
 
 string Revista::imprimir() const {
-    return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " +
+    return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
            autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion + ", " + std::to_string(get_numero()) + ", " + std::to_string(get_volumen());
 }
