@@ -9,12 +9,13 @@
 using namespace std;
 
 class MaterialDigital : public Material {
-private:
+protected:
+
     string tipoFormato;
     public:
-    MaterialDigital(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
-        const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
-        const string &tipo_formato)
+    MaterialDigital(int numClasificacion = 0, int numCatalogo = 0, const std::string &titulo = "", const std::string &autores = "",
+        const std::string &palabrasClave = "", const std::string &tipoMaterial = "", const std::string &estadoMaterial = "",
+        const string &tipo_formato = "")
         : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
           tipoFormato(tipo_formato) {
     }
