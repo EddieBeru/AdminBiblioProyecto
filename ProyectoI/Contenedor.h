@@ -5,15 +5,6 @@
 #include <sstream>
 using namespace std;
 
-<<<<<<< HEAD
-template <class T>
-class Contenedor;  // Declaración anticipada de la clase plantilla
-
-template <class T>
-std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj); // 👈 Declaración del operador
-
-=======
->>>>>>> PruebaOperadores
 template<class T>
 class Contenedor {
 private:
@@ -32,12 +23,8 @@ public:
     void eliminar(Nodo<T>*);
     void ordenarAscendente();
 
-<<<<<<< HEAD
-    friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
-=======
 	template <class T>
     friend std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
->>>>>>> PruebaOperadores
 
     string toString();
 };
@@ -109,9 +96,6 @@ int Contenedor<T>::tamano() {
 template<class T>
 bool Contenedor<T>::existe(Nodo<T>* n) {
     Nodo<T>* aux = inicio;
-<<<<<<< HEAD
-    return true;
-=======
 	while (aux != nullptr) {
 		if (aux == n) {
 			return true;
@@ -119,7 +103,6 @@ bool Contenedor<T>::existe(Nodo<T>* n) {
 		aux = aux->getSig();
 	}
     return false;
->>>>>>> PruebaOperadores
 }
 
 template<class T>
@@ -163,15 +146,9 @@ std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj) {
 template<class T>
 void Contenedor<T>::ordenarAscendente() {
     int n = tamano();
-<<<<<<< HEAD
     for (int i = n-1; i >= 0; i--) { // Número de pasadas
         for (int j = 0; j <= i - 1 ; j++) { // Comparaciones en cada pasada
-            if (buscar(j) < buscar(j + 1)) { // Si están en mal orden, los cambio
-=======
-    for (int i = n-1; i >= 0; i--) { // N�mero de pasadas
-        for (int j = 0; j <= i - 1 ; j++) { // Comparaciones en cada pasada
-            if (buscar(j)->getItem() < buscar(j + 1)->getItem()) { // Si est�n en mal orden, los cambio
->>>>>>> PruebaOperadores
+            if (buscar(j)->getItem() < buscar(j + 1)->getItem()) { // Si están en mal orden, los cambio
 				Nodo<T>* aux = buscar(j);
 				Nodo<T>* aux2 = buscar(j + 1);
 

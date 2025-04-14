@@ -4,10 +4,6 @@
 
 #include "Fisico.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> PruebaOperadores
 Fisico::Fisico(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
     const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
     const std::string &tipo_formato, const std::string &estilo_formato)
@@ -30,8 +26,4 @@ std::string Fisico::imprimir() const {
     return "Fisico: " + std::to_string(numClasificacion) + ", " + std::to_string(numCatalogo) + ", " +
            titulo + ", " + autores + ", " + palabrasClave + ", " + tipoMaterial + ", " +
            estadoMaterial + ", " + tipoFormato + ", " + estiloFormato;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> PruebaOperadores

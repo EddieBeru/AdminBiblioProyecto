@@ -23,9 +23,5 @@ public:
     virtual std::string imprimir() const override;
 };
 
-#endif // FISICO_H
 
-<<<<<<< HEAD
 #endif //FISICO_H
-=======
->>>>>>> PruebaOperadores
