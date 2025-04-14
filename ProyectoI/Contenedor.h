@@ -96,6 +96,13 @@ int Contenedor<T>::tamano() {
 template<class T>
 bool Contenedor<T>::existe(Nodo<T>* n) {
     Nodo<T>* aux = inicio;
+	while (aux != nullptr) {
+		if (aux == n) {
+			return true;
+		}
+		aux = aux->getSig();
+	}
+    return false;
 }
 
 template<class T>
@@ -141,7 +148,7 @@ void Contenedor<T>::ordenarAscendente() {
     int n = tamano();
     for (int i = n-1; i >= 0; i--) { // Número de pasadas
         for (int j = 0; j <= i - 1 ; j++) { // Comparaciones en cada pasada
-            if (buscar(j) < buscar(j + 1)) { // Si están en mal orden, los cambio
+            if (buscar(j)->getItem() < buscar(j + 1)->getItem()) { // Si están en mal orden, los cambio
 				Nodo<T>* aux = buscar(j);
 				Nodo<T>* aux2 = buscar(j + 1);
 

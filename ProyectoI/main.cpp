@@ -43,6 +43,10 @@ int main() {
 	contenedor->ordenarAscendente();
 	std::cout << *contenedor << std::endl;
 
+    delete p;
+    delete p2;
+    delete p3;
+
     return 0;
 }
 
