@@ -4,19 +4,19 @@
 
 #include "Revista.h"
 
-std::string Revista::get_nombre() const {
-    return nombre;
+std::string Revista::get_ubicacion() const {
+    return ubicacion;
 }
 
-void Revista::set_nombre(const std::string &nombre) {
-    this->nombre = nombre;
+void Revista::set_ubicacion(const std::string &ubicacion) {
+    this->ubicacion = ubicacion;
 }
 
 int Revista::get_numero() const {
     return numero;
 }
 
-void Revista::set_numero(const int numero) {
+void Revista::set_numero(int numero) {
     this->numero = numero;
 }
 
@@ -24,15 +24,19 @@ int Revista::get_volumen() const {
     return volumen;
 }
 
-void Revista::set_volumen(const int volumen) {
+void Revista::set_volumen(int volumen) {
     this->volumen = volumen;
 }
 
-Revista::Revista(const int numClasificacion, const int numCatalogo, const std::string &autores,
-                 const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
-                 const std::string &nombre, const int numero, const int volumen)
-        : Material(numClasificacion, numCatalogo, autores, palabrasClave, tipoMaterial, estadoMaterial),
-          nombre(nombre),
-          numero(numero),
-          volumen(volumen) {
+int Revista::getDuracionPrestamo() const {
+    return 2; //2 dias maximo de prestamo
+}
+
+std::string Revista::getTipo() const {
+    return "Revista"; //tipo es revista
+}
+
+string Revista::imprimir() const {
+    return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
+           autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion + ", " + std::to_string(get_numero()) + ", " + std::to_string(get_volumen());
 }

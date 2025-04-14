@@ -151,4 +151,8 @@ CMakeFiles/ProyectoI.dir/main.cpp.obj: \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
  E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Libro.h \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Material.h
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Material.h \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Nodo.h \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Contenedor.h \
+ E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc
