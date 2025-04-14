@@ -99,8 +99,14 @@ bool operator>=(const Material& a, const Material& b) {
     return a.get_titulo() >= b.get_titulo();
 }
 bool operator==(const Material& a, const Material& b) {
-    return a.get_titulo() == b.get_titulo();
+    return (a.titulo == b.titulo) &&
+        (a.numClasificacion == b.numClasificacion) &&
+        (a.numCatalogo == b.numCatalogo) &&
+        (a.getTipo() == b.getTipo());
 }
 bool operator!=(const Material& a, const Material& b) {
-    return a.get_titulo()!= b.get_titulo();
+    return (a.titulo != b.titulo) ||
+        (a.numClasificacion != b.numClasificacion) ||
+        (a.numCatalogo != b.numCatalogo) ||
+        (a.getTipo() != b.getTipo());
 }
