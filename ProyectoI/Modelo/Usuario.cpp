@@ -27,3 +27,11 @@ bool operator!=(const Usuario& a, const Usuario& b) {
 		(a.nombreCompleto != b.nombreCompleto) ||
 		(a.estado != b.estado);
 }
+
+std::ostream& operator<<(std::ostream& os, const Usuario& a) {
+	return os << "Usuario: " << std::endl
+		<< "\t Cedula: " << a.cedula << std::endl
+		<< "\t Nombre Completo: " << a.nombreCompleto << std::endl
+		<< "\t Estado: " << (a.estado ? "Activo" : "Inactivo") << std::endl;
+
+} 

@@ -19,4 +19,6 @@ add_executable(ProyectoI main.cpp
         Modelo/EnLinea.cpp
         Modelo/EnLinea.h
         Modelo/Usuario.cpp
-        Modelo/Usuario.h)
+        Modelo/Usuario.h 
+        Modelo/Prestamo.h 
+        Modelo/Prestamo.cpp)

@@ -27,6 +27,8 @@ public:
 	friend bool operator>=(const Usuario& a, const Usuario& b);
 	friend bool operator==(const Usuario& a, const Usuario& b);
 	friend bool operator!=(const Usuario& a, const Usuario& b);
+
+	friend std::ostream& operator<<(std::ostream& os, const Usuario& a);
 };
 
 #endif
