@@ -85,22 +85,22 @@ std::ostream & operator<<(std::ostream &os, const Material &obj) {
     return os << obj.imprimir();
 }
 
-bool operator<(const Material &a, const Material &b){
+//Sobrecarga de distintos operadores de comparación
+bool operator<(const Material& a, const Material& b) {
     return a.get_titulo() < b.get_titulo();
 }
-
 bool operator<=(const Material& a, const Material& b) {
-	return a.get_titulo() <= b.get_titulo();
+    return a.get_titulo() <= b.get_titulo();
 }
 bool operator>(const Material& a, const Material& b) {
-	return a.get_titulo() > b.get_titulo();
+    return a.get_titulo() > b.get_titulo();
 }
 bool operator>=(const Material& a, const Material& b) {
-	return a.get_titulo() >= b.get_titulo();
+    return a.get_titulo() >= b.get_titulo();
 }
 bool operator==(const Material& a, const Material& b) {
-	return a.get_titulo() == b.get_titulo();
+    return a.get_titulo() == b.get_titulo();
 }
 bool operator!=(const Material& a, const Material& b) {
-	return a.get_titulo() != b.get_titulo();
+    return a.get_titulo()!= b.get_titulo();
 }

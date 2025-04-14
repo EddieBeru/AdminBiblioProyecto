@@ -66,13 +66,14 @@ public:
     //la sobrecarga del operador de salida en cada clase hija
     virtual std::string imprimir() const = 0;
 
-    friend bool operator<(const Material &a, const Material &b);
-    
-    friend bool operator<=(const Material &a, const Material &b);
-    friend bool operator>(const Material &a, const Material &b);
-    friend bool operator>=(const Material &a, const Material &b);
-    friend bool operator==(const Material &a, const Material &b);
-    friend bool operator!=(const Material &a, const Material &b);
+    //Multiples operadores de comparación, no es recomendable hacerlo virtual puro
+	//así que mejor dejarlo que otras clases lo hereden.
+    friend bool operator<(const Material& a, const Material& b);
+    friend bool operator<=(const Material& a, const Material& b);
+    friend bool operator>(const Material& a, const Material& b);
+    friend bool operator>=(const Material& a, const Material& b);
+    friend bool operator==(const Material& a, const Material& b);
+    friend bool operator!=(const Material& a, const Material& b);
     
 };
 

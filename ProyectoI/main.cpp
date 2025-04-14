@@ -11,14 +11,15 @@ int main() {
     Libro* p2 = new Libro(21, 1, "El Principito", "", "", "", "", "");
     std::cout << *p2 << std::endl;
     Libro* p3 = new Libro(21, 1, "Diario de Ana Frank", "", "", "", "", "");
-    std::cout << *p2 << std::endl;
+    std::cout << *p3 << std::endl;
 
-    std::cout << ((p < p2) ? "p es menor" : "p2 es mayor o igual") << std::endl;
-    std::cout << ((p <= p2) ? "p es menor o igual" : "p2 es mayor") << std::endl;
-    std::cout << ((p > p2) ? "p es mayor" : "p2 es menor o igual") << std::endl;
-    std::cout << ((p >= p2) ? "p es mayor o igual" : "p2 es menor") << std::endl;
-    std::cout << ((p == p2) ? "p es igual a p2" : "p2 no es igual a p") << std::endl;
-    std::cout << ((p != p2) ? "p no es igual a p2" : "p2 es igual a p") << std::endl;
+
+    std::cout << ((p < p2) ? "p es menor" : "p es mayor o igual") << std::endl;
+    std::cout << ((p <= p2) ? "p es menor o igual" : "p es mayor") << std::endl;
+    std::cout << ((p > p2) ? "p es mayor" : "p es menor o igual") << std::endl;
+    std::cout << ((p >= p2) ? "p es mayor o igual" : "p es menor") << std::endl;
+    std::cout << ((p == p2) ? "p es igual a p2" : "p no es igual a p2") << std::endl;
+    std::cout << ((p != p2) ? "p no es igual a p2" : "p es igual a p2") << std::endl;
 
     Contenedor<Libro>* contenedor = new Contenedor<Libro>();
 	contenedor->agregarPrincipio(new Nodo<Libro>(*p2));
