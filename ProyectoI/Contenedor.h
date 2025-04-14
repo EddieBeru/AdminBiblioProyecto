@@ -5,6 +5,12 @@
 #include <sstream>
 using namespace std;
 
+template <class T>
+class Contenedor;  // Declaración anticipada de la clase plantilla
+
+template <class T>
+std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj); // 👈 Declaración del operador
+
 template<class T>
 class Contenedor {
 private:
@@ -23,8 +29,7 @@ public:
     void eliminar(Nodo<T>*);
     void ordenarAscendente();
 
-	template <class T>
-    friend std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
+    friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
 
     string toString();
 };
@@ -96,6 +101,7 @@ int Contenedor<T>::tamano() {
 template<class T>
 bool Contenedor<T>::existe(Nodo<T>* n) {
     Nodo<T>* aux = inicio;
+    return true;
 }
 
 template<class T>
