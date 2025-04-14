@@ -14,14 +14,21 @@ class Material {
 protected:
     int numClasificacion;
     int numCatalogo;
+    std::string titulo;
     std::string autores;
     std::string palabrasClave;
     std::string tipoMaterial;
     std::string estadoMaterial;
 public:
     // Constructor
-    Material(const int numClasificacion = 0, const int numCatalogo = 0, const std::string &autores = "", const std::string &palabrasClave = "",
-         const std::string &tipoMaterial = "", const std::string &estadoMaterial = "");
+    Material(
+        const int numClasificacion = 0,
+        const int numCatalogo = 0,
+        const std::string &titulo = "",
+        const std::string &autores = "",
+        const std::string &palabrasClave = "",
+        const std::string &tipoMaterial = "",
+        const std::string &estadoMaterial = "");
     // Destructor
     virtual ~Material();
 
@@ -31,6 +38,9 @@ public:
 
     int get_num_catalogo() const;
     void set_num_catalogo(const int num_catalogo);
+
+    std::string get_titulo() const;
+    void set_titulo(const std::string &titulo);
 
     std::string get_autores() const;
     void set_autores(const std::string &autores);
@@ -56,8 +66,14 @@ public:
     //la sobrecarga del operador de salida en cada clase hija
     virtual std::string imprimir() const = 0;
 
+    friend bool operator<(const Material &a, const Material &b);
+
+    friend bool operator<=(const Material &a, const Material &b);
+    friend bool operator>(const Material &a, const Material &b);
+    friend bool operator>=(const Material &a, const Material &b);
+    friend bool operator==(const Material &a, const Material &b);
+    friend bool operator!=(const Material &a, const Material &b);
+
 };
-
-
 
 #endif //MATERIAL_H

@@ -4,10 +4,15 @@
 
 #include "Libro.h"
 
-Libro::Libro(const int numClasificacion, const int numCatalogo, const std::string &autores,
-        const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
+Libro::Libro(const int numClasificacion,
+        const int numCatalogo,
+        const std::string &titulo,
+        const std::string &autores,
+        const std::string &palabrasClave,
+        const std::string &tipoMaterial,
+        const std::string &estadoMaterial,
         const std::string &ubicacion)
-        : Material(numClasificacion, numCatalogo, autores, palabrasClave, tipoMaterial, estadoMaterial),
+        : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
           ubicacion(ubicacion) {
 }
 
@@ -31,7 +36,7 @@ void Libro::set_ubicacion(const std::string &ubicacion) {
 }
 
 std::string Libro::imprimir() const {
-    return "Libro: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " +
+    return "Libro: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
            autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion;
 }
 
