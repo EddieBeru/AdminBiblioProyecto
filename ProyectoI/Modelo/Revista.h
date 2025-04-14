@@ -1,13 +1,32 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #ifndef REVISTA_H
 #define REVISTA_H
 
 #include "Material.h"
+<<<<<<< HEAD
+=======
+using namespace std;
+>>>>>>> PruebaOperadores
 
+class Revista : public Material {
+private:
+    string ubicacion;
+    int numero;
+    int volumen;
+    public:
+    Revista(int numClasificacion = 0, int numCatalogo = 0, const std::string &titulo = "", const std::string &autores = "",
+        const std::string &palabrasClave = "", const std::string &tipoMaterial = "", const std::string &estadoMaterial = "",
+        const string &ubicacion = "", int numero = 0, int volumen = 0)
+        : Material(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial),
+          ubicacion(ubicacion),
+          numero(numero),
+          volumen(volumen) {
+    }
 
+<<<<<<< HEAD
 class Revista : public Material {
 private:
     std::string ubicacion;
@@ -26,6 +45,11 @@ public:
     std::string get_ubicacion() const;
 
     void set_ubicacion(const std::string &ubicacion);
+=======
+    string get_ubicacion() const;
+
+    void set_ubicacion(const string &ubicacion);
+>>>>>>> PruebaOperadores
 
     int get_numero() const;
 
@@ -37,9 +61,15 @@ public:
 
     //metodos virtuales puros siendo heredos de clase padre
     virtual int getDuracionPrestamo() const override;
+<<<<<<< HEAD
     virtual std::string getTipo() const override;
 
     virtual std::string imprimir() const override;
+=======
+    virtual string getTipo() const override;
+
+    virtual string imprimir() const override;
+>>>>>>> PruebaOperadores
 };
 
 

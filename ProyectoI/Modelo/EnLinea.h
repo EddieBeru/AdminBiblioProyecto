@@ -1,5 +1,5 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #ifndef ENLINEA_H
@@ -23,6 +23,4 @@ public:
     virtual std::string imprimir() const override;
 };
 
-
-
-#endif //ENLINEA_H
+#endif // ENLINEA_H

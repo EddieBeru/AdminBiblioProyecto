@@ -1,9 +1,13 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #include "EnLinea.h"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> PruebaOperadores
 EnLinea::EnLinea(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
     const std::string &palabrasClave, const std::string &tipoMaterial, const std::string &estadoMaterial,
     const std::string &tipo_formato, bool acceso)
@@ -26,4 +30,8 @@ std::string EnLinea::imprimir() const {
     return "EnLinea: " + std::to_string(numClasificacion) + ", " + std::to_string(numCatalogo) + ", " +
            titulo + ", " + autores + ", " + palabrasClave + ", " + tipoMaterial + ", " +
            estadoMaterial + ", " + tipoFormato + ", " + (acceso ? "Acceso Publico" : "Acceso Restringido");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> PruebaOperadores

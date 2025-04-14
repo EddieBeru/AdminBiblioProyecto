@@ -1,14 +1,22 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #include "Revista.h"
 
+<<<<<<< HEAD
 std::string Revista::get_ubicacion() const {
     return ubicacion;
 }
 
 void Revista::set_ubicacion(const std::string &ubicacion) {
+=======
+string Revista::get_ubicacion() const {
+    return ubicacion;
+}
+
+void Revista::set_ubicacion(const string &ubicacion) {
+>>>>>>> PruebaOperadores
     this->ubicacion = ubicacion;
 }
 
@@ -32,6 +40,7 @@ int Revista::getDuracionPrestamo() const {
     return 2; //2 dias maximo de prestamo
 }
 
+<<<<<<< HEAD
 std::string Revista::getTipo() const {
     return "Revista"; //tipo es revista
 }
@@ -40,3 +49,13 @@ std::string Revista::imprimir() const {
     return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
            autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion + ", " + std::to_string(get_numero()) + ", " + std::to_string(get_volumen());
 }
+=======
+string Revista::getTipo() const {
+    return "Revista"; //tipo es revista
+}
+
+string Revista::imprimir() const {
+    return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
+           autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion + ", " + std::to_string(get_numero()) + ", " + std::to_string(get_volumen());
+}
+>>>>>>> PruebaOperadores

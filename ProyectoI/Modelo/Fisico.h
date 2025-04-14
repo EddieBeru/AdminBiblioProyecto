@@ -1,5 +1,5 @@
 //
-// Created by arias on 4/11/2025.
+// Created by ugald on 11/4/2025.
 //
 
 #ifndef FISICO_H
@@ -23,5 +23,9 @@ public:
     virtual std::string imprimir() const override;
 };
 
+#endif // FISICO_H
 
+<<<<<<< HEAD
 #endif //FISICO_H
+=======
+>>>>>>> PruebaOperadores
