@@ -5,6 +5,12 @@
 #include <sstream>
 using namespace std;
 
+template <class T>
+class Contenedor; // Forward declaration of Nodo class
+
+template <class T>
+std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
+
 template<class T>
 class Contenedor {
 private:
@@ -23,8 +29,8 @@ public:
     void eliminar(Nodo<T>*);
     void ordenarAscendente();
 
-	template <class T>
-    friend std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
+    friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
+
 
     string toString();
 };

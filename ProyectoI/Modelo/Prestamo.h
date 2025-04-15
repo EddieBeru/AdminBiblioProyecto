@@ -1,4 +1,4 @@
-#ifndef PRESTAMO.H
+#ifndef PRESTAMO_H
 #define PRESTAMO_H
 
 #include <iostream>

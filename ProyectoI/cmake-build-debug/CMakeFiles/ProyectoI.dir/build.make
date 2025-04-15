@@ -166,6 +166,34 @@ CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.s"
 	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\EnLinea.cpp -o CMakeFiles\ProyectoI.dir\Modelo\EnLinea.cpp.s
 
+CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj: CMakeFiles/ProyectoI.dir/flags.make
+CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj: E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.cpp
+CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj: CMakeFiles/ProyectoI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj -MF CMakeFiles\ProyectoI.dir\Modelo\Usuario.cpp.obj.d -o CMakeFiles\ProyectoI.dir\Modelo\Usuario.cpp.obj -c E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Usuario.cpp
+
+CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.i"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Usuario.cpp > CMakeFiles\ProyectoI.dir\Modelo\Usuario.cpp.i
+
+CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.s"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Usuario.cpp -o CMakeFiles\ProyectoI.dir\Modelo\Usuario.cpp.s
+
+CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj: CMakeFiles/ProyectoI.dir/flags.make
+CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj: E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Prestamo.cpp
+CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj: CMakeFiles/ProyectoI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj -MF CMakeFiles\ProyectoI.dir\Modelo\Prestamo.cpp.obj.d -o CMakeFiles\ProyectoI.dir\Modelo\Prestamo.cpp.obj -c E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Prestamo.cpp
+
+CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.i"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Prestamo.cpp > CMakeFiles\ProyectoI.dir\Modelo\Prestamo.cpp.i
+
+CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.s"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo\Prestamo.cpp -o CMakeFiles\ProyectoI.dir\Modelo\Prestamo.cpp.s
+
 # Object files for target ProyectoI
 ProyectoI_OBJECTS = \
 "CMakeFiles/ProyectoI.dir/main.cpp.obj" \
@@ -174,7 +202,9 @@ ProyectoI_OBJECTS = \
 "CMakeFiles/ProyectoI.dir/Modelo/Revista.cpp.obj" \
 "CMakeFiles/ProyectoI.dir/Modelo/MaterialDigital.cpp.obj" \
 "CMakeFiles/ProyectoI.dir/Modelo/Fisico.cpp.obj" \
-"CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj"
+"CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj" \
+"CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj" \
+"CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj"
 
 # External object files for target ProyectoI
 ProyectoI_EXTERNAL_OBJECTS =
@@ -186,11 +216,13 @@ ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Revista.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/MaterialDigital.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Fisico.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj
+ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj
+ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/build.make
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/linkLibs.rsp
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/objects1.rsp
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ProyectoI.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ProyectoI.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoI.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

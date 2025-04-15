@@ -248,6 +248,30 @@ Modelo/MaterialDigital.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/MaterialDigital.cpp.s
 .PHONY : Modelo/MaterialDigital.cpp.s
 
+Modelo/Prestamo.obj: Modelo/Prestamo.cpp.obj
+.PHONY : Modelo/Prestamo.obj
+
+# target to build an object file
+Modelo/Prestamo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj
+.PHONY : Modelo/Prestamo.cpp.obj
+
+Modelo/Prestamo.i: Modelo/Prestamo.cpp.i
+.PHONY : Modelo/Prestamo.i
+
+# target to preprocess a source file
+Modelo/Prestamo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.i
+.PHONY : Modelo/Prestamo.cpp.i
+
+Modelo/Prestamo.s: Modelo/Prestamo.cpp.s
+.PHONY : Modelo/Prestamo.s
+
+# target to generate assembly for a file
+Modelo/Prestamo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.s
+.PHONY : Modelo/Prestamo.cpp.s
+
 Modelo/Revista.obj: Modelo/Revista.cpp.obj
 .PHONY : Modelo/Revista.obj
 
@@ -271,6 +295,30 @@ Modelo/Revista.s: Modelo/Revista.cpp.s
 Modelo/Revista.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Revista.cpp.s
 .PHONY : Modelo/Revista.cpp.s
+
+Modelo/Usuario.obj: Modelo/Usuario.cpp.obj
+.PHONY : Modelo/Usuario.obj
+
+# target to build an object file
+Modelo/Usuario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj
+.PHONY : Modelo/Usuario.cpp.obj
+
+Modelo/Usuario.i: Modelo/Usuario.cpp.i
+.PHONY : Modelo/Usuario.i
+
+# target to preprocess a source file
+Modelo/Usuario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.i
+.PHONY : Modelo/Usuario.cpp.i
+
+Modelo/Usuario.s: Modelo/Usuario.cpp.s
+.PHONY : Modelo/Usuario.s
+
+# target to generate assembly for a file
+Modelo/Usuario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.s
+.PHONY : Modelo/Usuario.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -320,9 +368,15 @@ help:
 	@echo ... Modelo/MaterialDigital.obj
 	@echo ... Modelo/MaterialDigital.i
 	@echo ... Modelo/MaterialDigital.s
+	@echo ... Modelo/Prestamo.obj
+	@echo ... Modelo/Prestamo.i
+	@echo ... Modelo/Prestamo.s
 	@echo ... Modelo/Revista.obj
 	@echo ... Modelo/Revista.i
 	@echo ... Modelo/Revista.s
+	@echo ... Modelo/Usuario.obj
+	@echo ... Modelo/Usuario.i
+	@echo ... Modelo/Usuario.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

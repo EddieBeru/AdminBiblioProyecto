@@ -13,7 +13,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Libro.cpp" "CMakeFiles/ProyectoI.dir/Modelo/Libro.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/Libro.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Material.cpp" "CMakeFiles/ProyectoI.dir/Modelo/Material.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/Material.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/MaterialDigital.cpp" "CMakeFiles/ProyectoI.dir/Modelo/MaterialDigital.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/MaterialDigital.cpp.obj.d"
+  "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Prestamo.cpp" "CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Revista.cpp" "CMakeFiles/ProyectoI.dir/Modelo/Revista.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/Revista.cpp.obj.d"
+  "E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.cpp" "CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/main.cpp" "CMakeFiles/ProyectoI.dir/main.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/main.cpp.obj.d"
   )
 
