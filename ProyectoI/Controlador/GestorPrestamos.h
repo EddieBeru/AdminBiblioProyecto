@@ -9,8 +9,8 @@
 
 class GestorPrestamos {
 
-};
 
+};
 
 
 #endif //GESTORPRESTAMOS_H

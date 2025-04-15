@@ -5,9 +5,11 @@
 #ifndef GESTORMATERIALES_H
 #define GESTORMATERIALES_H
 
+#include "../Modelo/Material.h"
 
 
 class GestorMateriales {
+private:
 
 };
 

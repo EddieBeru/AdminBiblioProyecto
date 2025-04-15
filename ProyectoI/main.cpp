@@ -1,8 +1,8 @@
 #include <iostream>
 
 #include "Modelo/Libro.h"
-#include "Nodo.h"
-#include "Contenedor.h"
+#include "Modelo/Nodo.h"
+#include "Modelo/Contenedor.h"
 
 int main() {
 	/*
