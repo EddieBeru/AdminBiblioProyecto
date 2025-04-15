@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj"
   "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj.d"
+  "CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj"
+  "CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj.d"
+  "CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj"
+  "CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj.d"
   "CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj"
   "CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj.d"
   "CMakeFiles/ProyectoI.dir/Modelo/Fisico.cpp.obj"

@@ -208,6 +208,34 @@ CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.s"
 	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorMateriales.cpp -o CMakeFiles\ProyectoI.dir\Controlador\GestorMateriales.cpp.s
 
+CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj: CMakeFiles/ProyectoI.dir/flags.make
+CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj: E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/GestorUsuarios.cpp
+CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj: CMakeFiles/ProyectoI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj -MF CMakeFiles\ProyectoI.dir\Controlador\GestorUsuarios.cpp.obj.d -o CMakeFiles\ProyectoI.dir\Controlador\GestorUsuarios.cpp.obj -c E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorUsuarios.cpp
+
+CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.i"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorUsuarios.cpp > CMakeFiles\ProyectoI.dir\Controlador\GestorUsuarios.cpp.i
+
+CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.s"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorUsuarios.cpp -o CMakeFiles\ProyectoI.dir\Controlador\GestorUsuarios.cpp.s
+
+CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj: CMakeFiles/ProyectoI.dir/flags.make
+CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj: E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/GestorPrestamos.cpp
+CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj: CMakeFiles/ProyectoI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj -MF CMakeFiles\ProyectoI.dir\Controlador\GestorPrestamos.cpp.obj.d -o CMakeFiles\ProyectoI.dir\Controlador\GestorPrestamos.cpp.obj -c E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorPrestamos.cpp
+
+CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.i"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorPrestamos.cpp > CMakeFiles\ProyectoI.dir\Controlador\GestorPrestamos.cpp.i
+
+CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.s"
+	E:\CLion\CLION2~1.5\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorPrestamos.cpp -o CMakeFiles\ProyectoI.dir\Controlador\GestorPrestamos.cpp.s
+
 # Object files for target ProyectoI
 ProyectoI_OBJECTS = \
 "CMakeFiles/ProyectoI.dir/main.cpp.obj" \
@@ -219,7 +247,9 @@ ProyectoI_OBJECTS = \
 "CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj" \
 "CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj" \
 "CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj" \
-"CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj"
+"CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj" \
+"CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj" \
+"CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj"
 
 # External object files for target ProyectoI
 ProyectoI_EXTERNAL_OBJECTS =
@@ -234,11 +264,13 @@ ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/EnLinea.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Usuario.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Modelo/Prestamo.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj
+ProyectoI.exe: CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj
+ProyectoI.exe: CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/build.make
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/linkLibs.rsp
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/objects1.rsp
 ProyectoI.exe: CMakeFiles/ProyectoI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ProyectoI.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\CLion\AdminBiblioProyecto\ProyectoI\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ProyectoI.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoI.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

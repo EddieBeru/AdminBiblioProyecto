@@ -152,6 +152,54 @@ Controlador/GestorMateriales.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.s
 .PHONY : Controlador/GestorMateriales.cpp.s
 
+Controlador/GestorPrestamos.obj: Controlador/GestorPrestamos.cpp.obj
+.PHONY : Controlador/GestorPrestamos.obj
+
+# target to build an object file
+Controlador/GestorPrestamos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj
+.PHONY : Controlador/GestorPrestamos.cpp.obj
+
+Controlador/GestorPrestamos.i: Controlador/GestorPrestamos.cpp.i
+.PHONY : Controlador/GestorPrestamos.i
+
+# target to preprocess a source file
+Controlador/GestorPrestamos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.i
+.PHONY : Controlador/GestorPrestamos.cpp.i
+
+Controlador/GestorPrestamos.s: Controlador/GestorPrestamos.cpp.s
+.PHONY : Controlador/GestorPrestamos.s
+
+# target to generate assembly for a file
+Controlador/GestorPrestamos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.s
+.PHONY : Controlador/GestorPrestamos.cpp.s
+
+Controlador/GestorUsuarios.obj: Controlador/GestorUsuarios.cpp.obj
+.PHONY : Controlador/GestorUsuarios.obj
+
+# target to build an object file
+Controlador/GestorUsuarios.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj
+.PHONY : Controlador/GestorUsuarios.cpp.obj
+
+Controlador/GestorUsuarios.i: Controlador/GestorUsuarios.cpp.i
+.PHONY : Controlador/GestorUsuarios.i
+
+# target to preprocess a source file
+Controlador/GestorUsuarios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.i
+.PHONY : Controlador/GestorUsuarios.cpp.i
+
+Controlador/GestorUsuarios.s: Controlador/GestorUsuarios.cpp.s
+.PHONY : Controlador/GestorUsuarios.s
+
+# target to generate assembly for a file
+Controlador/GestorUsuarios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.s
+.PHONY : Controlador/GestorUsuarios.cpp.s
+
 Modelo/EnLinea.obj: Modelo/EnLinea.cpp.obj
 .PHONY : Modelo/EnLinea.obj
 
@@ -380,6 +428,12 @@ help:
 	@echo ... Controlador/GestorMateriales.obj
 	@echo ... Controlador/GestorMateriales.i
 	@echo ... Controlador/GestorMateriales.s
+	@echo ... Controlador/GestorPrestamos.obj
+	@echo ... Controlador/GestorPrestamos.i
+	@echo ... Controlador/GestorPrestamos.s
+	@echo ... Controlador/GestorUsuarios.obj
+	@echo ... Controlador/GestorUsuarios.i
+	@echo ... Controlador/GestorUsuarios.s
 	@echo ... Modelo/EnLinea.obj
 	@echo ... Modelo/EnLinea.i
 	@echo ... Modelo/EnLinea.s
