@@ -128,6 +128,30 @@ ProyectoI/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/build
 .PHONY : ProyectoI/fast
 
+Controlador/GestorMateriales.obj: Controlador/GestorMateriales.cpp.obj
+.PHONY : Controlador/GestorMateriales.obj
+
+# target to build an object file
+Controlador/GestorMateriales.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj
+.PHONY : Controlador/GestorMateriales.cpp.obj
+
+Controlador/GestorMateriales.i: Controlador/GestorMateriales.cpp.i
+.PHONY : Controlador/GestorMateriales.i
+
+# target to preprocess a source file
+Controlador/GestorMateriales.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.i
+.PHONY : Controlador/GestorMateriales.cpp.i
+
+Controlador/GestorMateriales.s: Controlador/GestorMateriales.cpp.s
+.PHONY : Controlador/GestorMateriales.s
+
+# target to generate assembly for a file
+Controlador/GestorMateriales.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoI.dir\build.make CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.s
+.PHONY : Controlador/GestorMateriales.cpp.s
+
 Modelo/EnLinea.obj: Modelo/EnLinea.cpp.obj
 .PHONY : Modelo/EnLinea.obj
 
@@ -353,6 +377,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProyectoI
+	@echo ... Controlador/GestorMateriales.obj
+	@echo ... Controlador/GestorMateriales.i
+	@echo ... Controlador/GestorMateriales.s
 	@echo ... Modelo/EnLinea.obj
 	@echo ... Modelo/EnLinea.i
 	@echo ... Modelo/EnLinea.s

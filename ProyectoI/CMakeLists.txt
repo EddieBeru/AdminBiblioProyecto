@@ -21,4 +21,6 @@ add_executable(ProyectoI main.cpp
         Modelo/Usuario.cpp
         Modelo/Usuario.h 
         Modelo/Prestamo.h 
-        Modelo/Prestamo.cpp)
+        Modelo/Prestamo.cpp
+        Controlador/GestorMateriales.cpp
+        Controlador/GestorMateriales.h)
