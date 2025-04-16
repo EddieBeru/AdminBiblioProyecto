@@ -7,13 +7,13 @@
 template <class T>
 class Nodo {
 private:
-    T item;
+    T* item;
     Nodo<T>* sig;
 public:
-    Nodo(T = nullptr, Nodo<T>* = nullptr);
+    Nodo(T* = nullptr, Nodo<T>* = nullptr);
     ~Nodo();
     T getItem();
-    void setItem(T);
+    void setItem(T*);
     Nodo<T>* getSig();
     void setSig(Nodo<T>*);
 
@@ -24,7 +24,7 @@ public:
 
 
 template<class T>
-Nodo<T>::Nodo(T i , Nodo<T> *s) {
+Nodo<T>::Nodo(T* i , Nodo<T> *s) {
     item = i;
     sig = s;
 }
@@ -39,7 +39,7 @@ T Nodo<T>::getItem() {
 }
 
 template<class T>
-void Nodo<T>::setItem(T i) {
+void Nodo<T>::setItem(T* i) {
     item = i;
 }
 

@@ -576,5 +576,12 @@
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=StringLiteralTypo/@EntryIndexRemoved" />
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=CommentTypo/@EntryIndexRemoved" />
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=IdentifierTypo/@EntryIndexRemoved" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/@KeyIndexDefined" value="true" type="bool" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=OperationType/@EntryIndexedValue" value="Output operator" type="string" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=OperationType/@EntryIndexRemoved" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=UseWideStream/@EntryIndexedValue" value="False" type="string" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=UseWideStream/@EntryIndexRemoved" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=PrivateBoostSerializeOperations/@EntryIndexedValue" value="True" type="string" />
+    <option name="/Default/CodeStyle/Generate/=CppStreamOperations/Options/=PrivateBoostSerializeOperations/@EntryIndexRemoved" />
   </component>
 </project>

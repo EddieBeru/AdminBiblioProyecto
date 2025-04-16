@@ -3,6 +3,7 @@
 #include "Modelo/Libro.h"
 #include "Modelo/Nodo.h"
 #include "Modelo/Contenedor.h"
+#include "Controlador/GestorMateriales.h"
 
 int main() {
 	/*
@@ -18,7 +19,7 @@ int main() {
     std::cout << enlinea << std::endl;
     std::cout << enlinea.getDuracionPrestamo() << std::endl;
     */
-    Libro* p = new Libro(111, 1, "Don Quijote", "", "", "", "", "");
+    /*Libro* p = new Libro(111, 1, "Don Quijote", "", "", "", "", "");
     std::cout << *p << std::endl;
     Libro* p2 = new Libro(21, 1, "El Principito", "", "", "", "", "");
     std::cout << *p2 << std::endl;
@@ -40,7 +41,17 @@ int main() {
 	system("pause");
 
 	contenedor->ordenarAscendente();
-	std::cout << *contenedor << std::endl;
+	std::cout << *contenedor << std::endl;*/
+
+	//prueba de gestor de materiales
+	GestorMateriales* gestor = new GestorMateriales();
+	Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+
+	gestor->agregarMaterial(libro);
+
+	std::cout << gestor << std::endl;
+
+
 
     return 0;
 }
