@@ -143,7 +143,7 @@ template <class T>
 std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj) {
 	Nodo<T>* aux = obj.inicio;
 	while (aux != nullptr) {
-		os << &(aux->getItem()) << std::endl;
+		os << *(aux->getItem()) << std::endl;
 		aux = aux->getSig();
 	}
 	return os;

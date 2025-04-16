@@ -144,12 +144,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Contenedor.h",
+			"path" : "Modelo/Contenedor.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Nodo.h",
+			"path" : "Modelo/Nodo.h",
 			"sourceGroupIndex" : 1
 		},
 		{

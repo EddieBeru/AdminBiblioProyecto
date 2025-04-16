@@ -1,12 +1,12 @@
-CMakeFiles/ProyectoI.dir/main.cpp.obj: \
- E:\CLion\AdminBiblioProyecto\ProyectoI\main.cpp \
- E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj: \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorMateriales.cpp \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador\GestorMateriales.h \
+ E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
- E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
@@ -148,21 +148,17 @@ CMakeFiles/ProyectoI.dir/main.cpp.obj: \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Material.h \
+ E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Libro.h \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Material.h \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Nodo.h \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Contenedor.h \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Modelo/Nodo.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Contenedor.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Nodo.h \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  E:/CLion/CLion\ 2024.3.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador/GestorMateriales.h \
- E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Material.h \
- E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Contenedor.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Libro.h \
- E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Revista.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Material.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Revista.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/EnLinea.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/MaterialDigital.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Fisico.h \
