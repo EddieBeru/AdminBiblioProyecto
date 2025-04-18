@@ -3,3 +3,11 @@
 //
 
 #include "GestorUsuarios.h"
+
+GestorUsuarios::GestorUsuarios() {
+    listaUsuarios=new Contenedor<Usuario>();
+}
+
+void GestorUsuarios::agregarUsuario(Usuario *usuario) {
+    listaUsuarios->agregarFinal(new Nodo<Usuario>(usuario));
+}
