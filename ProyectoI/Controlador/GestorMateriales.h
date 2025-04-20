@@ -25,8 +25,10 @@ public:
 
   void agregarMaterial(Material *material); // Agrega un material al contenedor
 
-  friend std::ostream & operator<<(std::ostream &os, const GestorMateriales *obj) {
-    return os << "listaMateriales: " << obj->listaMateriales;
+  friend std::ostream & operator<<(std::ostream &os, const GestorMateriales &obj) {
+    os << "Lista de materiales:\n";
+    os << *obj.listaMateriales;
+    return os;
   }
 
 

@@ -166,4 +166,10 @@ CMakeFiles/ProyectoI.dir/main.cpp.obj: \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/EnLinea.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/MaterialDigital.h \
  E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Fisico.h \
- E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/MaterialDigital.h
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/MaterialDigital.h \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador/GestorPrestamos.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Prestamo.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.h \
+ E:\CLion\AdminBiblioProyecto\ProyectoI\Controlador/GestorUsuarios.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.h \
+ E:/CLion/AdminBiblioProyecto/ProyectoI/Modelo/Nodo.h

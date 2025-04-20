@@ -51,7 +51,7 @@ int main() {
 
 	gestor->agregarMaterial(libro);
 
-	std::cout << gestor << std::endl;
+	std::cout << *gestor << std::endl;
 
 	//prueba de gestor de prestamos
 	GestorPrestamos* prestamoGestor = new GestorPrestamos();
@@ -59,13 +59,13 @@ int main() {
 	Prestamo* prestamo1=new Prestamo(*usuario1, *libro, "fecha ejemplo", "fecha Ejemplo");
 	prestamoGestor->agregarPrestamo(prestamo1);
 
-	std::cout << prestamoGestor << std::endl;
+	std::cout << *prestamoGestor << std::endl;
 
 	//prueba de gestor de usuarios
 	GestorUsuarios* gestor2 = new GestorUsuarios();
 	Usuario* usuario2=new Usuario();
 	gestor2->agregarUsuario(usuario2);
 
-	std::cout << gestor2 << std::endl;
+	std::cout << *gestor2 << std::endl;
     return 0;
 }

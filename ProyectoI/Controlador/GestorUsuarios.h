@@ -18,8 +18,10 @@ private:
     GestorUsuarios();
     void agregarUsuario(Usuario* usuario);
 
-    friend std::ostream & operator<<(std::ostream &os, const GestorUsuarios *obj) {
-        return os << "listaUsuarios: " << obj->listaUsuarios;
+    friend std::ostream & operator<<(std::ostream &os, const GestorUsuarios &obj) {
+        os << "Lista de materiales:\n";
+        os << *obj.listaUsuarios;
+        return os;
     }
 };
 

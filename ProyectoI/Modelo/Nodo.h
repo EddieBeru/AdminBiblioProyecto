@@ -12,7 +12,7 @@ private:
 public:
     Nodo(T* = nullptr, Nodo<T>* = nullptr);
     ~Nodo();
-    T getItem();
+    T* getItem();
     void setItem(T*);
     Nodo<T>* getSig();
     void setSig(Nodo<T>*);
@@ -34,7 +34,7 @@ Nodo<T>::~Nodo() {
 }
 
 template<class T>
-T Nodo<T>::getItem() {
+T* Nodo<T>::getItem() {
     return item;
 }
 

@@ -17,8 +17,10 @@ private:
 GestorPrestamos();
 
     void agregarPrestamo(Prestamo* prestamo); //agrega un prestamo al contenedor
-    friend std::ostream & operator<<(std::ostream &os, const GestorPrestamos *obj) {
-        return os << "listaPrestamos: " << obj->listaPrestamos;
+    friend std::ostream & operator<<(std::ostream &os, const GestorPrestamos &obj) {
+        os << "Lista de prestamos:\n";
+        os << *obj.listaPrestamos;
+        return os;
     }
 };
 

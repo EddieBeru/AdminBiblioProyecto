@@ -30,9 +30,6 @@ public:
     void ordenarAscendente();
 
     friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
-
-
-    string toString();
 };
 
 
@@ -70,6 +67,15 @@ void Contenedor<T>::agregarFinal(Nodo<T>* n) {
         }
         aux->setSig(n);
     }
+    if (inicio == nullptr) {
+              // si estaba vacía, el nuevo nodo es el primero
+               inicio = n;
+          } else {
+                  Nodo<T>* aux = inicio;
+                  while (aux->getSig() != nullptr) {aux = aux->getSig();
+                      }
+                  aux->setSig(n);
+          }
 }
 
 template<class T>
@@ -175,4 +181,6 @@ void Contenedor<T>::ordenarAscendente() {
         }
     }
 }
+
+
 #endif
