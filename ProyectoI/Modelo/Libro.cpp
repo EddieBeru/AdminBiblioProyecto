@@ -36,8 +36,14 @@ void Libro::set_ubicacion(const std::string &ubicacion) {
 }
 
 std::string Libro::imprimir() const {
-    return "Libro: " + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
-           autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion;
+    return "Libro:\n\t\tClasificacion: " + std::to_string(get_num_clasificacion()) +
+           "\n\t\tCatalogo: " + std::to_string(get_num_catalogo()) +
+           "\n\t\tTitulo: " + titulo +
+           "\n\t\tAutor(es): " + autores +
+           "\n\t\tPalabras clave: " + palabrasClave +
+           "\n\t\tTipo de material: " + tipoMaterial +
+           "\n\t\tEstado: " + estadoMaterial +
+           "\n\t\tUbicacion: " + ubicacion;
 }
 
 

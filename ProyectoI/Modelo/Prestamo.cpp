@@ -36,6 +36,6 @@ std::ostream& operator<<(std::ostream& os, const Prestamo& a) {
 	return os << "Prestamo: " << std::endl
 		<< "\t Usuario: " << *(a.usuario) << std::endl
 		<< "\t Material: " << *(a.material) << std::endl
-		<< "\t Fecha Prestamo: " << a.fechaPrestamo << std::endl
+		<< "\n\t Fecha Prestamo: " << a.fechaPrestamo << std::endl
 		<< "\t Fecha Devolucion: " << a.fechaDevolucion << std::endl;
 }
