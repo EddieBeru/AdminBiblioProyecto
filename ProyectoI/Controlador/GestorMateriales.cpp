@@ -12,6 +12,17 @@ void GestorMateriales::agregarMaterial(Material *material) {
     listaMateriales->agregarFinal(new Nodo<Material>(material));
 }
 
+Material *GestorMateriales::buscarMaterialPorTitulo(const std::string &titulo) const {
+    Material *mat = listaMateriales->find_if([&](Material *m) {
+        if (auto matAux = dynamic_cast<Material *>(m)) {
+            return matAux->get_titulo() == titulo;
+        }
+        return false;
+    });
+    return static_cast<Material *>(mat);
+}
+
+
 
 
 

@@ -29,6 +29,9 @@ public:
     void eliminar(Nodo<T>*);
     void ordenarAscendente();
 
+    template<typename Predicate>
+    T* find_if(Predicate p) const;
+
     friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
 };
 
@@ -182,5 +185,17 @@ void Contenedor<T>::ordenarAscendente() {
     }
 }
 
+template<class T>
+template<typename Predicate>
+T* Contenedor<T>::find_if(Predicate p) const {
+    Nodo<T>* aux = inicio;
+    while (aux) {
+        if (p(aux->getItem())) {
+            return aux->getItem();
+        }
+        aux = aux->getSig();
+    }
+    return nullptr;
+}
 
 #endif
