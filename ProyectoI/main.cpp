@@ -59,6 +59,13 @@ int main() {
 	//Prueba de busqueda por clasificacion
 	cout << *(gestor->buscarMaterialPorClasificacion(12345)) << endl;
 
+	//Prueba de modificacion
+	Libro libroModificado(12345, 67890, "ejemplo titulo", "Autor Modificado", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Modificada");
+	gestor->modificarLibro(12345, libroModificado);
+	std::cout << *gestor << std::endl;
+
+
+
 
 
 

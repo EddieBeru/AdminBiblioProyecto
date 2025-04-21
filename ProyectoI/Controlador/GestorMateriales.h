@@ -29,6 +29,18 @@ public:
 
   Material* buscarMaterialPorClasificacion(const int numClasificacion) const;
 
+  bool modificarMaterial(int numClasificacion, const Material& datosNuevos);
+
+  bool modificarLibro(int numClasificacion, const Libro& datosNuevos);
+
+  bool modificarRevista(int numClasificacion, const Revista& datosNuevos);
+
+  bool modificarDigital(int numClasificacion, const MaterialDigital& datosNuevos);
+
+  bool modificarFisico(int numClasificacion, const Fisico& datosNuevos);
+
+  bool modificarEnLinea(int numClasificacion, const EnLinea& datosNuevos);
+
   friend std::ostream & operator<<(std::ostream &os, const GestorMateriales &obj) {
     os << "Lista de materiales:\n";
     os << *obj.listaMateriales;
@@ -45,7 +57,6 @@ public:
 
 
 };
-
 
 
 
