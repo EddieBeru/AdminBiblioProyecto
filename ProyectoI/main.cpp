@@ -81,20 +81,21 @@ int main() {
 	std::cout << *(gestor->buscarMaterialPorClasificacion(77889)) << endl;
 
 
+	GestorUsuarios* gestor2 = new GestorUsuarios();
+	Usuario* usuario2=new Usuario();
+	gestor2->agregarUsuario(usuario2);
+
+	std::cout << *gestor2 << std::endl;
+
+	delete gestor;
+
 	/**GestorPrestamos* prestamoGestor = new GestorPrestamos();
 	Usuario* usuario1=new Usuario();
 	Prestamo* prestamo1=new Prestamo(*usuario1, *libro, "fecha ejemplo", "fecha Ejemplo");
 	prestamoGestor->agregarPrestamo(prestamo1);
 
-	std::cout << *prestamoGestor << std::endl;
+	std::cout << *prestamoGestor << std::endl;*/
 
-	GestorUsuarios* gestor2 = new GestorUsuarios();
-	Usuario* usuario2=new Usuario();
-	gestor2->agregarUsuario(usuario2);
-
-	std::cout << *gestor2 << std::endl;*/
-
-	delete gestor;
 
     return 0;
 }
