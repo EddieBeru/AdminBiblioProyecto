@@ -23,6 +23,11 @@ private:
         os << *obj.listaUsuarios;
         return os;
     }
+
+    Usuario* buscarPorId(int id);
+    bool modificarUsuario(int id, Usuario* datosNuevos);
+
+
 };
 
 

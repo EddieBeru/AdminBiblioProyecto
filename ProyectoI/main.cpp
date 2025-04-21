@@ -82,12 +82,23 @@ int main() {
 
 
 	GestorUsuarios* gestor2 = new GestorUsuarios();
-	Usuario* usuario2=new Usuario();
-	gestor2->agregarUsuario(usuario2);
+	Usuario* usuario = new Usuario(12345678, "Juan Perez", true);
+	gestor2->agregarUsuario(usuario);
 
 	std::cout << *gestor2 << std::endl;
 
+	std::cout << *gestor2->buscarPorId(12345678) << std::endl;
+
+	//Prueba de modificacion de usuario
+	Usuario usuarioModificado(12345678, "Juan Perez Modificado", false);
+	gestor2->modificarUsuario(12345678, &usuarioModificado);
+	std::cout << *gestor2->buscarPorId(12345678) << std::endl;
+
+	//Para este tipo de casos se necesitaria manejar excepciones
+	std::cout << *gestor2->buscarPorId(2222) << std::endl;
+
 	delete gestor;
+	delete gestor2;
 
 	/**GestorPrestamos* prestamoGestor = new GestorPrestamos();
 	Usuario* usuario1=new Usuario();
