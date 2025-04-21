@@ -48,25 +48,33 @@ int main() {
 	//prueba de gestor de materiales
 	GestorMateriales* gestor = new GestorMateriales();
 	Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
-
+	//Crear revista con datos diferentes al libro
+	Material* revista = new Revista(54321, 98765, "Titulo Revista", "Autor Revista", "Palabra3, Palabra4", "Tipo Revista", "Estado Revista", "Ubicacion Revista", 10, 5);
+	//Crear material digital
+	Material* materialDigitalEnLinea = new EnLinea(77889, 99001, "Curso de Programacion en C++", "Jane Smith", "Programacion, Tecnologia", "Curso en Linea", "Disponible", "Formato PDF", true);
+	gestor->agregarMaterial(revista);
 	gestor->agregarMaterial(libro);
+	gestor->agregarMaterial(materialDigitalEnLinea);
 
 	std::cout << *gestor << std::endl;
 
 	//Prueba de busqueda por titulo
-	cout << *(gestor->buscarMaterialPorTitulo("ejemplo titulo")) << endl;
+	//std::cout << *(gestor->buscarMaterialPorTitulo("ejemplo titulo")) << endl;
 
 	//Prueba de busqueda por clasificacion
-	cout << *(gestor->buscarMaterialPorClasificacion(12345)) << endl;
+	//std::cout << *(gestor->buscarMaterialPorClasificacion(12345)) << endl;
 
 	//Prueba de modificacion
+	//Se modifica autor y ubicacion del libro
 	Libro libroModificado(12345, 67890, "ejemplo titulo", "Autor Modificado", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Modificada");
 	gestor->modificarLibro(12345, libroModificado);
-	std::cout << *gestor << std::endl;
+	std::cout << *(gestor->buscarMaterialPorTitulo("ejemplo titulo")) << endl;
 
-
-
-
+	//Prueba de modificacion de revista
+	Revista revistaModificada(54321, 98765, "Titulo Revista", "Autor Modificado", "Palabra3, Palabra4", "Tipo Revista", "Estado Modificado", "Ubicacion Modificada", 20, 10);
+	gestor->modificarRevista(54321, revistaModificada);
+	std::cout << *(gestor->buscarMaterialPorClasificacion(54321)) << endl;
+	//Prueba de modificacion de material digital
 
 
 	/**GestorPrestamos* prestamoGestor = new GestorPrestamos();

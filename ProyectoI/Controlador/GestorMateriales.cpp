@@ -37,7 +37,6 @@ bool GestorMateriales::modificarMaterial(int numClasificacion, const Material &d
     //Se debería hacer un try-catch para evitar errores
     Material* matMod = buscarMaterialPorClasificacion(numClasificacion);
         if (matMod->get_num_clasificacion() == numClasificacion) {
-            matMod->set_num_clasificacion(datosNuevos.get_num_clasificacion());
             matMod->set_num_catalogo(datosNuevos.get_num_catalogo());
             matMod->set_titulo(datosNuevos.get_titulo());
             matMod->set_autores(datosNuevos.get_autores());
@@ -66,10 +65,13 @@ bool GestorMateriales::modificarRevista(int numClasificacion, const Revista &dat
     //Se debería hacer un try-catch para evitar errores
     Revista* revMod = dynamic_cast<Revista*>(buscarMaterialPorClasificacion(numClasificacion));
     if (revMod->get_num_clasificacion() == numClasificacion) {
-        modificarRevista(numClasificacion, datosNuevos);
+        modificarMaterial(numClasificacion, datosNuevos);
         revMod->set_numero(datosNuevos.get_numero());
         revMod->set_volumen(datosNuevos.get_volumen());
+        revMod->set_ubicacion(datosNuevos.get_ubicacion());
         return true;
+    } else {
+        return false;
     }
 }
 

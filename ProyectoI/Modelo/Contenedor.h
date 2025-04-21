@@ -62,23 +62,15 @@ void Contenedor<T>::agregarPrincipio(Nodo<T>* n) {
 
 template<class T>
 void Contenedor<T>::agregarFinal(Nodo<T>* n) {
-    Nodo<T>* aux = inicio;
-    if (aux != nullptr) {
-        while (aux->getSig() != nullptr) {
-
+    if (inicio == nullptr) {
+        inicio = n; // Si la lista está vacía, el nuevo nodo es el inicio
+    } else {
+        Nodo<T>* aux = inicio;
+        while (aux->getSig() != nullptr) { // Recorre hasta el último nodo
             aux = aux->getSig();
         }
-        aux->setSig(n);
+        aux->setSig(n); // Agrega el nuevo nodo al final
     }
-    if (inicio == nullptr) {
-              // si estaba vacía, el nuevo nodo es el primero
-               inicio = n;
-          } else {
-                  Nodo<T>* aux = inicio;
-                  while (aux->getSig() != nullptr) {aux = aux->getSig();
-                      }
-                  aux->setSig(n);
-          }
 }
 
 template<class T>

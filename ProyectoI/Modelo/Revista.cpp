@@ -37,6 +37,14 @@ std::string Revista::getTipo() const {
 }
 
 std::string Revista::imprimir() const {
-    return "Revista" + std::to_string(get_num_clasificacion()) + ", " + std::to_string(get_num_catalogo()) + ", " + titulo + ", " +
-           autores + ", " + palabrasClave + ", " + tipoMaterial + ", " + estadoMaterial + ", " + ubicacion + ", " + std::to_string(get_numero()) + ", " + std::to_string(get_volumen());
+    return "Revista:\n\t\tClasificacion: " + std::to_string(get_num_clasificacion()) +
+           "\n\t\tCatalogo: " + std::to_string(get_num_catalogo()) +
+           "\n\t\tTitulo: " + titulo +
+           "\n\t\tAutor(es): " + autores +
+           "\n\t\tPalabras clave: " + palabrasClave +
+           "\n\t\tTipo de material: " + tipoMaterial +
+           "\n\t\tEstado: " + estadoMaterial +
+           "\n\t\tUbicacion: " + ubicacion +
+           "\n\t\tNumero: " + std::to_string(get_numero()) +
+           "\n\t\tVolumen: " + std::to_string(get_volumen());
 }
