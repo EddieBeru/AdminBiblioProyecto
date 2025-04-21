@@ -56,6 +56,9 @@ int main() {
 	//Prueba de busqueda por titulo
 	cout << *(gestor->buscarMaterialPorTitulo("ejemplo titulo")) << endl;
 
+	//Prueba de busqueda por clasificacion
+	cout << *(gestor->buscarMaterialPorClasificacion(12345)) << endl;
+
 
 
 

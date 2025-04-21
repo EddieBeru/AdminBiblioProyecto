@@ -27,6 +27,8 @@ public:
 
   Material* buscarMaterialPorTitulo(const std::string& titulo) const;
 
+  Material* buscarMaterialPorClasificacion(const int numClasificacion) const;
+
   friend std::ostream & operator<<(std::ostream &os, const GestorMateriales &obj) {
     os << "Lista de materiales:\n";
     os << *obj.listaMateriales;

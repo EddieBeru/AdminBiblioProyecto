@@ -22,6 +22,17 @@ Material *GestorMateriales::buscarMaterialPorTitulo(const std::string &titulo) c
     return static_cast<Material *>(mat);
 }
 
+Material *GestorMateriales::buscarMaterialPorClasificacion(const int numClasificacion) const {
+    Material *mat = listaMateriales->find_if([&](Material *m) {
+       if (auto matAux = dynamic_cast<Material *>(m)) {
+           return matAux->get_num_clasificacion() == numClasificacion;
+       }
+        return false;
+    });
+    return static_cast<Material *>(mat);
+}
+
+
 
 
 
