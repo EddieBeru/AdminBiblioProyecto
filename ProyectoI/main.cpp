@@ -74,7 +74,11 @@ int main() {
 	Revista revistaModificada(54321, 98765, "Titulo Revista", "Autor Modificado", "Palabra3, Palabra4", "Tipo Revista", "Estado Modificado", "Ubicacion Modificada", 20, 10);
 	gestor->modificarRevista(54321, revistaModificada);
 	std::cout << *(gestor->buscarMaterialPorClasificacion(54321)) << endl;
+
 	//Prueba de modificacion de material digital
+	EnLinea materialDigitalModificado(77889, 99001, "Curso de Programacion en C++", "Jane Smith", "Programacion, Tecnologia", "Curso en Linea", "No Disponible", "Formato PDF", false);
+	gestor->modificarEnLinea(77889, materialDigitalModificado);
+	std::cout << *(gestor->buscarMaterialPorClasificacion(77889)) << endl;
 
 
 	/**GestorPrestamos* prestamoGestor = new GestorPrestamos();
