@@ -23,7 +23,13 @@ std::string Fisico::getTipo() const {
 }
 
 std::string Fisico::imprimir() const {
-    return "Fisico: " + std::to_string(numClasificacion) + ", " + std::to_string(numCatalogo) + ", " +
-           titulo + ", " + autores + ", " + palabrasClave + ", " + tipoMaterial + ", " +
-           estadoMaterial + ", " + tipoFormato + ", " + estiloFormato;
+    return "Fisico:\n\t\tClasificacion: " + std::to_string(numClasificacion) +
+           "\n\t\tCatalogo: " + std::to_string(numCatalogo) +
+           "\n\t\tTitulo: " + titulo +
+           "\n\t\tAutor(es): " + autores +
+           "\n\t\tPalabras clave: " + palabrasClave +
+           "\n\t\tTipo de material: " + tipoMaterial +
+           "\n\t\tEstado: " + estadoMaterial +
+           "\n\t\tFormato: " + tipoFormato +
+           "\n\t\tEstilo de formato: " + estiloFormato;
 }

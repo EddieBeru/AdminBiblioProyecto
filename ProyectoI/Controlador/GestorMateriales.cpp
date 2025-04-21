@@ -75,6 +75,43 @@ bool GestorMateriales::modificarRevista(int numClasificacion, const Revista &dat
     }
 }
 
+bool GestorMateriales::modificarDigital(int numClasificacion, const MaterialDigital &datosNuevos) {
+    //Se debería hacer un try-catch para evitar errores
+    MaterialDigital* matDigMod = dynamic_cast<MaterialDigital*>(buscarMaterialPorClasificacion(numClasificacion));
+    if (matDigMod->get_num_clasificacion() == numClasificacion) {
+        modificarMaterial(numClasificacion, datosNuevos);
+        matDigMod->set_tipo_formato(datosNuevos.get_tipo_formato());
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool GestorMateriales::modificarFisico(int numClasificacion, const Fisico &datosNuevos) {
+    //Se debería hacer un try-catch para evitar errores
+    Fisico* fisMod = dynamic_cast<Fisico*>(buscarMaterialPorClasificacion(numClasificacion));
+    if (fisMod->get_num_clasificacion() == numClasificacion) {
+        modificarDigital(numClasificacion, datosNuevos);
+        fisMod->set_estilo_formato(datosNuevos.get_estilo_formato());
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool GestorMateriales::modificarEnLinea(int numClasificacion, const EnLinea &datosNuevos) {
+    //Se debería hacer un try-catch para evitar errores
+    EnLinea* enLinMod = dynamic_cast<EnLinea*>(buscarMaterialPorClasificacion(numClasificacion));
+    if (enLinMod->get_num_clasificacion() == numClasificacion) {
+        modificarDigital(numClasificacion, datosNuevos);
+        enLinMod->set_acceso(datosNuevos.get_acceso());
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 
 
 
