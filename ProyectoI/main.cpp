@@ -95,7 +95,8 @@ int main() {
 	std::cout << *gestor2->buscarPorId(12345678) << std::endl;
 
 	//Para este tipo de casos se necesitaria manejar excepciones
-	std::cout << *gestor2->buscarPorId(2222) << std::endl;
+    gestor2->buscarPorId(222) ? std::cout << *gestor2->buscarPorId(222) << std::endl : std::cout << "Usuario no encontrado" << std::endl;
+
 
 	delete gestor;
 	delete gestor2;

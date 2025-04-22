@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/AdminArchivos.cpp" "CMakeFiles/ProyectoI.dir/Controlador/AdminArchivos.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Controlador/AdminArchivos.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/GestorMateriales.cpp" "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/GestorPrestamos.cpp" "CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj.d"
   "E:/CLion/AdminBiblioProyecto/ProyectoI/Controlador/GestorUsuarios.cpp" "CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj" "gcc" "CMakeFiles/ProyectoI.dir/Controlador/GestorUsuarios.cpp.obj.d"
