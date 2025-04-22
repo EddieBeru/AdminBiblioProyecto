@@ -47,8 +47,7 @@ int main() {
 	std::cout << *contenedor << std::endl;*/
 
 	//prueba de gestor de materiales
-	GestorMateriales* gestor = new GestorMateriales();
-	Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	/*Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
 	//Crear revista con datos diferentes al libro
 	Material* revista = new Revista(54321, 98765, "Titulo Revista", "Autor Revista", "Palabra3, Palabra4", "Tipo Revista", "Estado Revista", "Ubicacion Revista", 10, 5);
 	//Crear material digital
@@ -126,6 +125,14 @@ int main() {
 	prestamoGestor->agregarPrestamo(prestamo1);
 
 	std::cout << *prestamoGestor << std::endl;*/
+
+	GestorUsuarios* gestorUsuarios = new GestorUsuarios();
+
+	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
+
+	AdminArchivos::cargarUsuarios(*gestorUsuarios);
+
+	cout << *gestorUsuarios << endl;
 
 
     return 0;

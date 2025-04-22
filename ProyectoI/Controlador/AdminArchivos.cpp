@@ -27,7 +27,44 @@ void AdminArchivos::guardarUsuarios(GestorUsuarios &gestor) {
     }
     for (int i = 0; i < gestor.get_lista_usuarios()->tamano(); i++) {
         Usuario* usuario = gestor.get_usuario(i);
-        archivo.write(reinterpret_cast<char*>(usuario), sizeof(Usuario));
+        archivo.write((char*)&usuario, sizeof(Usuario));
+    }
+    archivo.close();
+}
+
+void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
+    std::fstream archivo;
+    archivo.open("materiales.bin", std::ios::binary | std::ios::in);
+    if (!archivo.is_open()) {
+        std::cerr << "Error al abrir el archivo materiales.bin" << std::endl;
+        return;
+    }
+    while (!archivo.eof()) {
+        Material* material;
+        archivo.read(reinterpret_cast<char*>(material), sizeof(Material));
+        if (archivo.gcount() == sizeof(Material)) {
+            gestor.agregarMaterial(material);
+        } else {
+            delete material; // Eliminar el objeto si no se pudo leer correctamente
+        }
+    }
+}
+
+void AdminArchivos::cargarUsuarios(GestorUsuarios &gestor) {
+    std::fstream archivo;
+    archivo.open("usuarios.bin", std::ios::binary | std::ios::in);
+    if (!archivo.is_open()) {
+        std::cerr << "Error al abrir el archivo usuarios.bin" << std::endl;
+        return;
+    }
+    while (!archivo.eof()) {
+        Usuario *usuario = new Usuario();
+        archivo.read((char*)&usuario, sizeof(Usuario));
+        if (archivo.gcount() == sizeof(Usuario)) {
+            gestor.agregarUsuario(usuario);
+        } else {
+           // delete usuario; // Eliminar el objeto si no se pudo leer correctamente
+        }
     }
     archivo.close();
 }
