@@ -9,8 +9,10 @@ using namespace std;
 template <class T>
 class Contenedor; // Forward declaration of Nodo class
 
+/*
 template <class T>
 std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
+*/
 
 template<class T>
 class Contenedor {
@@ -33,7 +35,8 @@ public:
     template<typename Predicate>
     T* find_if(Predicate p) const;
 
-    friend std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
+    template<class U>
+    friend std::ostream& operator<<(std::ostream& os, const Contenedor<U>& obj);
 };
 
 
@@ -87,7 +90,7 @@ Nodo<T>* Contenedor<T>::buscar(int i) {
 		aux = aux->getSig();
 		index++;
 	}
-    if (aux != nullprt)
+    if (aux != nullptr)
         return aux;
     else
         throw new NodoNoEncontrado();

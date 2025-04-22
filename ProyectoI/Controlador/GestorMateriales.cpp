@@ -31,6 +31,10 @@ Material *GestorMateriales::buscarMaterialPorTitulo(const std::string &titulo) c
     
 }
 
+std::ostream& operator<<(std::ostream& os, const GestorMateriales& a) {
+    return os << "Lista de materiales:\n" << *a.listaMateriales << std::endl;
+}
+
 Material *GestorMateriales::buscarMaterialPorClasificacion(const int numClasificacion) const {
     try {
         Material *mat = listaMateriales->find_if([&](Material *m) {

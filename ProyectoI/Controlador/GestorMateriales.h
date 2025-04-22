@@ -41,12 +41,7 @@ public:
 
   bool modificarEnLinea(int numClasificacion, const EnLinea& datosNuevos);
 
-  friend std::ostream & operator<<(std::ostream &os, const GestorMateriales &obj) {
-    os << "Lista de materiales:\n";
-    os << *obj.listaMateriales;
-    return os;
-  }
-
+  friend std::ostream& operator<<(std::ostream& os, const GestorMateriales& a);
 
 
 
