@@ -6,6 +6,7 @@
 #include "Controlador/GestorMateriales.h"
 #include "Controlador/GestorPrestamos.h"
 #include "Controlador/GestorUsuarios.h"
+#include "Controlador/AdminArchivos.h"
 
 int main() {
 	/*
@@ -113,6 +114,7 @@ int main() {
 		return 3;
 	}
 
+	AdminArchivos::guardarMateriales(*gestor);
 
 	delete gestor;
 	delete gestor2;

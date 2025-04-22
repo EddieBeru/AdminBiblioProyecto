@@ -4,6 +4,10 @@
 
 #include "GestorMateriales.h"
 
+Contenedor<Material> * GestorMateriales::get_lista_materiales() const {
+    return listaMateriales;
+}
+
 GestorMateriales::GestorMateriales(){
     listaMateriales = new Contenedor<Material>();
 }
@@ -178,5 +182,9 @@ bool GestorMateriales::modificarEnLinea(int numClasificacion, const EnLinea &dat
     catch (std::exception& ex) {
         throw;
     }
+}
+
+Material* GestorMateriales::obtener_material(int index) {
+    return listaMateriales->buscar(index)->getItem();
 }
 

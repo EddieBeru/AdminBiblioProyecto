@@ -20,6 +20,7 @@ class GestorMateriales {
 private:
   Contenedor<Material>* listaMateriales; // Contenedor de materiales
 public:
+  Contenedor<Material> * get_lista_materiales() const;
 
   GestorMateriales();
 
@@ -41,15 +42,9 @@ public:
 
   bool modificarEnLinea(int numClasificacion, const EnLinea& datosNuevos);
 
+  Material* obtener_material(int index);
+
   friend std::ostream& operator<<(std::ostream& os, const GestorMateriales& a);
-
-
-
-
-
-
-
-
 
 };
 

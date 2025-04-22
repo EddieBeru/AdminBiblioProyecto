@@ -173,4 +173,12 @@ CMakeFiles/ProyectoI.dir/main.cpp.obj: \
  C:/Proyecto/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.h \
  C:\Proyecto\AdminBiblioProyecto\ProyectoI\Controlador/GestorUsuarios.h \
  C:/Proyecto/AdminBiblioProyecto/ProyectoI/Modelo/Usuario.h \
- C:/Proyecto/AdminBiblioProyecto/ProyectoI/Modelo/Nodo.h
+ C:/Proyecto/AdminBiblioProyecto/ProyectoI/Modelo/Nodo.h \
+ C:\Proyecto\AdminBiblioProyecto\ProyectoI\Controlador/AdminArchivos.h \
+ C:\Proyecto\AdminBiblioProyecto\ProyectoI\Controlador/GestorMateriales.h \
+ C:\Proyecto\AdminBiblioProyecto\ProyectoI\Controlador/GestorUsuarios.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc
