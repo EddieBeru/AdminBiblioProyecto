@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ProyectoI.dir/Controlador/AdminArchivos.cpp.obj"
+  "CMakeFiles/ProyectoI.dir/Controlador/AdminArchivos.cpp.obj.d"
   "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj"
   "CMakeFiles/ProyectoI.dir/Controlador/GestorMateriales.cpp.obj.d"
   "CMakeFiles/ProyectoI.dir/Controlador/GestorPrestamos.cpp.obj"

@@ -23,7 +23,7 @@ Material *GestorMateriales::buscarMaterialPorTitulo(const std::string &titulo) c
         return static_cast<Material*>(mat);
     }
     catch (NodoNoEncontrado &ex) {
-        throw;
+        throw ex.what();
     }
     catch (std::exception& ex) {
 		throw;

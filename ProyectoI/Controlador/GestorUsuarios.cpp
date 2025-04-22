@@ -23,7 +23,7 @@ Usuario* GestorUsuarios::buscarPorId(int id) {
         return static_cast<Usuario*>(usr);
     }
 	catch (NodoNoEncontrado &ex) {
-        throw;
+        throw UsuarioNoencontrado();
 	}
     catch (std::exception &ex) {
         throw;
@@ -43,7 +43,7 @@ bool GestorUsuarios::modificarUsuario(int id, Usuario *datosNuevos) {
         }
     }
     catch (NodoNoEncontrado& ex) {
-        throw;
+        throw UsuarioNoencontrado();
     }
     catch (std::exception& ex) {
         throw;

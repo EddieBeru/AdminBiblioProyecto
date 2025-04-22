@@ -94,8 +94,24 @@ int main() {
 	gestor2->modificarUsuario(12345678, &usuarioModificado);
 	std::cout << *gestor2->buscarPorId(12345678) << std::endl;
 
-	//Para este tipo de casos se necesitaria manejar excepciones
-	gestor2->buscarPorId(222) ? std::cout << *gestor2->buscarPorId(222) << std::endl : std::cout << "Usuario no encontrado" << std::endl;
+	try {
+		if (gestor2->buscarPorId(222)) {
+			std::cout << "Usuario encontrado" << std::endl;
+			std::cout << *gestor2->buscarPorId(222) << std::endl;
+		}
+	}
+	catch (const Excepcion& e) {
+		std::cerr << e.what() << std::endl;
+		return 1;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Excepción: " << e.what() << std::endl;
+		return 2;
+	}
+	catch (...) {
+		std::cerr << "Error desconocido." << std::endl;
+		return 3;
+	}
 
 
 	delete gestor;
