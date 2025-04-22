@@ -103,18 +103,19 @@ int main() {
 	}
 	catch (const Excepcion& e) {
 		std::cerr << e.what() << std::endl;
-		return 1;
+		//return 1;
 	}
 	catch (const std::exception& e) {
 		std::cerr << "Excepción: " << e.what() << std::endl;
-		return 2;
+		//return 2;
 	}
 	catch (...) {
 		std::cerr << "Error desconocido." << std::endl;
-		return 3;
+		//return 3;
 	}
 
 	AdminArchivos::guardarMateriales(*gestor);
+	AdminArchivos::guardarUsuarios(*gestor2);
 
 	delete gestor;
 	delete gestor2;

@@ -4,6 +4,14 @@
 
 #include "GestorUsuarios.h"
 
+Contenedor<Usuario> * GestorUsuarios::get_lista_usuarios() const {
+    return listaUsuarios;
+}
+
+Usuario* GestorUsuarios::get_usuario(int index) const {
+    return listaUsuarios->buscar(index)->getItem();
+}
+
 GestorUsuarios::GestorUsuarios() {
     listaUsuarios=new Contenedor<Usuario>();
 }
@@ -49,3 +57,5 @@ bool GestorUsuarios::modificarUsuario(int id, Usuario *datosNuevos) {
         throw;
     }
 }
+
+

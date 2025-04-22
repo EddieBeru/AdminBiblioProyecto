@@ -15,6 +15,10 @@ class GestorUsuarios {
 private:
     Contenedor<Usuario>* listaUsuarios; //contenedor de usuarios
 public:
+
+    Contenedor<Usuario> * get_lista_usuarios() const;
+    Usuario* get_usuario(int index) const;
+
     GestorUsuarios();
     void agregarUsuario(Usuario* usuario);
 
