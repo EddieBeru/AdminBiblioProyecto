@@ -27,4 +27,4 @@ add_executable(ProyectoI main.cpp
         Controlador/GestorUsuarios.cpp
         Controlador/GestorUsuarios.h
         Controlador/GestorPrestamos.cpp
-        Controlador/GestorPrestamos.h)
+        Controlador/GestorPrestamos.h "Modelo/Excepciones.h" "Modelo/Excepciones.cpp")

@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Nodo.h"
 #include <sstream>
+#include "Excepciones.h"
 using namespace std;
 
 template <class T>
@@ -32,7 +33,7 @@ public:
     template<typename Predicate>
     T* find_if(Predicate p) const;
 
-    friend std::ostream& operator<< <>(std::ostream& os, const Contenedor<T>& obj);
+    friend std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj);
 };
 
 
@@ -86,7 +87,10 @@ Nodo<T>* Contenedor<T>::buscar(int i) {
 		aux = aux->getSig();
 		index++;
 	}
-	return aux;
+    if (aux != nullprt)
+        return aux;
+    else
+        throw new NodoNoEncontrado();
 }
 
 template<class T>
@@ -125,6 +129,9 @@ void Contenedor<T>::eliminar(int i) {
         aux->setSig(aux->getSig()->getSig());
         delete aBorrar;
     }
+    else {
+        throw new ErrorElimiarNodo();
+    }
 }
 
 template<class T>
@@ -137,6 +144,9 @@ void Contenedor<T>::eliminar(Nodo<T>* n) {
         Nodo<T>* aBorrar = aux->getSig();
         aux->setSig(aux->getSig()->getSig());
         delete aBorrar;
+    }
+    else {
+        throw new ErrorElimiarNodo();
     }
 }
 
@@ -187,7 +197,7 @@ T* Contenedor<T>::find_if(Predicate p) const {
         }
         aux = aux->getSig();
     }
-    return nullptr;
+    throw new NodoNoEncontrado();
 }
 
 #endif

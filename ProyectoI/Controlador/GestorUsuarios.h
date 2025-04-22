@@ -14,7 +14,7 @@
 class GestorUsuarios {
 private:
     Contenedor<Usuario>* listaUsuarios; //contenedor de usuarios
-    public:
+public:
     GestorUsuarios();
     void agregarUsuario(Usuario* usuario);
 
