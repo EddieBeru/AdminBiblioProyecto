@@ -1,7 +1,3 @@
-//
-// Created by arias on 4/11/2025.
-//
-
 #include "Libro.h"
 
 Libro::Libro(const int numClasificacion,

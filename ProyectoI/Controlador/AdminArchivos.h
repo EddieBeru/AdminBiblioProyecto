@@ -6,6 +6,8 @@
 * Proyecto 1
 * 
 * 6-0499-0591; Bermúdez Ureña, Edie
+* 4-0264-0704; Arias Medía, Roy
+* 5-0460-0104; Ugalde, Felipe
 * 
 * Version 1.0.0 2025-04-22
 */

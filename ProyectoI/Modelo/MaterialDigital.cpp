@@ -1,6 +1,3 @@
-//
-// Created by ugald on 11/4/2025.
-//
 #include "MaterialDigital.h"
 
 std::string MaterialDigital::get_tipo_formato() const {

@@ -1,7 +1,3 @@
-//
-// Created by ugald on 11/4/2025.
-//
-
 #include "EnLinea.h"
 
 EnLinea::EnLinea(int numClasificacion, int numCatalogo, const std::string &titulo, const std::string &autores,
