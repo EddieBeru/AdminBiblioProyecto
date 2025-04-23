@@ -131,11 +131,19 @@ int main() {
 
 	GestorMateriales* gestor = new GestorMateriales();
 
-	//Material *matEj = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	Material *matEj = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	Material *matEj2 = new Revista(54321, 98765, "Titulo Revista", "Autor Revista", "Palabra3, Palabra4", "Tipo Revista", "Estado Revista", "Ubicacion Revista", 10, 5);
+	Material *matEj3 = new EnLinea(77889, 99001, "Curso de Programacion en C++", "Jane Smith", "Programacion, Tecnologia", "Curso en Linea", "Disponible", "EnLinea", true);
+	Material *matEj4 = new Fisico(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Fisico", "estilo ejemplo");
 
-	//->agregarMaterial(matEj);
+	//gestor->agregarMaterial(matEj);
+	//gestor->agregarMaterial(matEj2);
+	//gestor->agregarMaterial(matEj3);
+	//gestor->agregarMaterial(matEj4);
 
-	//std::cout << *gestor << std::endl;
+
+
+	std::cout << *gestor << std::endl;
 
 	//AdminArchivos::guardarMateriales(*gestor);
 
@@ -144,7 +152,10 @@ int main() {
 	std::cout << *gestor << std::endl;
 
 	delete gestor;
-	//delete matEj;
+	delete matEj;
+	delete matEj2;
+	delete matEj3;
+	delete matEj4;
 
     return 0;
 }

@@ -13,6 +13,7 @@
 #include "MaterialDigital.h"
 #include "EnLinea.h"
 #include "Fisico.h"
+#include "Usuario.h"
 
 
 struct DatosMaterial {
@@ -45,6 +46,9 @@ public:
 
     static void ser_MaterialDigital(std::ofstream& archivo, const MaterialDigital* material);
     static Material* des_MaterialDigital(std::ifstream& archivo);
+
+    static void ser_Usuario(std::ofstream& archivo, const Usuario* usuario);
+    static Usuario* des_Usuario(std::ifstream& archivo);
 
 };
 

@@ -162,6 +162,24 @@ Material* Serializacion::des_MaterialDigital(std::ifstream& archivo) {
     }
 }
 
+void Serializacion::ser_Usuario(std::ofstream &archivo, const Usuario *usuario) {
+    escribir_String(archivo, usuario->getNombreCompleto());
+    int cedula = usuario->getCedula();
+    archivo.write(reinterpret_cast<const char*>(&cedula), sizeof(cedula));
+    bool estado = usuario->getEstado();
+    archivo.write(reinterpret_cast<const char*>(&estado), sizeof(estado));
+}
+
+Usuario* Serializacion::des_Usuario(std::ifstream &archivo) {
+    std::string nombreCompleto = leer_String(archivo);
+    int cedula;
+    archivo.read(reinterpret_cast<char*>(&cedula), sizeof(cedula));
+    bool estado;
+    archivo.read(reinterpret_cast<char*>(&estado), sizeof(estado));
+
+    return new Usuario(cedula, nombreCompleto, estado);
+}
+
 
 
 

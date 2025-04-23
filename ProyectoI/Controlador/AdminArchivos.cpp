@@ -24,6 +24,14 @@ void AdminArchivos::guardarMateriales(GestorMateriales &gestor) {
 
         if (Libro* libro = dynamic_cast<Libro*>(material)) {
             Serializacion::ser_Libro(archivo, libro);
+        } else if (Revista* revista = dynamic_cast<Revista*>(material)) {
+            Serializacion::ser_Revista(archivo, revista);
+        } else if (EnLinea* enLinea = dynamic_cast<EnLinea*>(material)) {
+            Serializacion::ser_MaterialDigital(archivo, enLinea);
+        } else if (Fisico* fisico = dynamic_cast<Fisico*>(material)) {
+            Serializacion::ser_MaterialDigital(archivo, fisico);
+        } else {
+            throw;
         }
     }
     archivo.close();
@@ -49,7 +57,19 @@ void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
                 case TIPO_LIBRO:
                     mat = Serializacion::des_Libro(archivo);
                     break;
+                case TIPO_REVISTA:
+                    mat = Serializacion::des_Revista(archivo);
+                    break;
+                case TIPO_DIGITAL_ENLINEA:
+                    mat = Serializacion::des_MaterialDigital(archivo);
+                    break;
+                case TIPO_DIGITAL_FISICO:
+                    mat = Serializacion::des_MaterialDigital(archivo);
+                    break;
+                default:
+                    throw;
             }
+
         if (mat) {
             gestor.agregarMaterial(mat);
         }
