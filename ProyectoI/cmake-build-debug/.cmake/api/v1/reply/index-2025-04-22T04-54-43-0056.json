@@ -11,22 +11,22 @@
 			"cmake" : "E:/CLion/CLion 2024.3.5/bin/cmake/win/x64/bin/cmake.exe",
 			"cpack" : "E:/CLion/CLion 2024.3.5/bin/cmake/win/x64/bin/cpack.exe",
 			"ctest" : "E:/CLion/CLion 2024.3.5/bin/cmake/win/x64/bin/ctest.exe",
-			"root" : "E:/CLion/CLion 2024.3.5/bin/cmake/win/x64/share/cmake-3.30"
+			"root" : "E:/CLion/CLion 2024.3.5/bin/cmake/win/x64/share/cmake-3.31"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 30,
-			"patch" : 5,
-			"string" : "3.30.5",
+			"minor" : 31,
+			"patch" : 6,
+			"string" : "3.31.6",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-cb5c77d09042bd701dd5.json",
+			"jsonFile" : "codemodel-v2-8fe82f959db353421181.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-9f751d8ed76b02328145.json",
+			"jsonFile" : "cache-v2-a9d4ddb90ec6a5d705e8.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-3fe6c021a573af7c4647.json",
+			"jsonFile" : "cmakeFiles-v1-c113c4856e12ab5e72a4.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-9f751d8ed76b02328145.json",
+			"jsonFile" : "cache-v2-a9d4ddb90ec6a5d705e8.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-3fe6c021a573af7c4647.json",
+			"jsonFile" : "cmakeFiles-v1-c113c4856e12ab5e72a4.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -86,7 +86,7 @@
 		},
 		"codemodel-v2" : 
 		{
-			"jsonFile" : "codemodel-v2-cb5c77d09042bd701dd5.json",
+			"jsonFile" : "codemodel-v2-8fe82f959db353421181.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
