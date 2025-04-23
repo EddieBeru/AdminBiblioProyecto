@@ -39,7 +39,15 @@ void AdminArchivos::guardarMateriales(GestorMateriales &gestor) {
 
 
 void AdminArchivos::guardarUsuarios(GestorUsuarios &gestor) {
-
+    std::ofstream archivo("usuarios.bin", std::ios::binary);
+    if (!archivo.is_open()) {
+        throw ErrorAbrirArchivo("usuarios.bin");
+    }
+    for (int i = 0; i < gestor.get_lista_usuarios()->tamano(); i++) {
+        Usuario* usuario = gestor.get_usuario(i);
+        Serializacion::ser_Usuario(archivo, usuario);
+    }
+    archivo.close();
 }
 
 void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
@@ -78,6 +86,14 @@ void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
 }
 
 void AdminArchivos::cargarUsuarios(GestorUsuarios &gestor) {
-
+    std::ifstream archivo("usuarios.bin", std::ios::binary);
+    if (!archivo.is_open()) {
+        throw ErrorAbrirArchivo("usuarios.bin");
+    }
+    while (archivo.peek() != EOF) {
+        Usuario* usuario = Serializacion::des_Usuario(archivo);
+        gestor.agregarUsuario(usuario);
+    }
+    archivo.close();
 }
 

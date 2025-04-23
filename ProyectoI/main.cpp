@@ -151,11 +151,25 @@ int main() {
 
 	std::cout << *gestor << std::endl;
 
+	GestorUsuarios* gestorUsuarios = new GestorUsuarios();
+	//Usuario* usuarioEj = new Usuario(12345678, "Juan Perez", true);
+	//gestorUsuarios->agregarUsuario(usuarioEj);
+
+	std::cout << *gestorUsuarios << std::endl;
+	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
+
+	AdminArchivos::cargarUsuarios(*gestorUsuarios);
+
+	std::cout << *gestorUsuarios << std::endl;
+
+
 	delete gestor;
 	delete matEj;
 	delete matEj2;
 	delete matEj3;
 	delete matEj4;
+	delete gestorUsuarios;
+	//delete usuarioEj;
 
     return 0;
 }
