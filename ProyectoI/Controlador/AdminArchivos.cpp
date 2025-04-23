@@ -8,8 +8,7 @@ void AdminArchivos::guardarMateriales(GestorMateriales &gestor) {
     std::fstream archivo;
     archivo.open("materiales.bin", std::ios::binary | std::ios::out);
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo materiales.bin" << std::endl;
-        return;
+        throw ErrorAbrirArchivo("usuarios.bin");
     }
     for (int i = 0; i < gestor.get_lista_materiales()->tamano(); i++) {
         Material* material = gestor.obtener_material(i);
@@ -22,8 +21,7 @@ void AdminArchivos::guardarUsuarios(GestorUsuarios &gestor) {
     std::fstream archivo;
     archivo.open("usuarios.bin", std::ios::binary | std::ios::out);
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo usuarios.bin" << std::endl;
-        return;
+        throw ErrorAbrirArchivo("usuarios.bin");
     }
     for (int i = 0; i < gestor.get_lista_usuarios()->tamano(); i++) {
         Usuario* usuario = gestor.get_usuario(i);
@@ -36,8 +34,7 @@ void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
     std::fstream archivo;
     archivo.open("materiales.bin", std::ios::binary | std::ios::in);
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo materiales.bin" << std::endl;
-        return;
+        throw ErrorAbrirArchivo("usuarios.bin");
     }
     while (!archivo.eof()) {
         Material* material;
@@ -54,8 +51,7 @@ void AdminArchivos::cargarUsuarios(GestorUsuarios &gestor) {
     std::fstream archivo;
     archivo.open("usuarios.bin", std::ios::binary | std::ios::in);
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo usuarios.bin" << std::endl;
-        return;
+		throw ErrorAbrirArchivo("usuarios.bin");
     }
     while (!archivo.eof()) {
         Usuario *usuario = new Usuario();

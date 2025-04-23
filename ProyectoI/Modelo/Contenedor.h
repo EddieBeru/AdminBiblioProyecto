@@ -93,7 +93,7 @@ Nodo<T>* Contenedor<T>::buscar(int i) {
     if (aux != nullptr)
         return aux;
     else
-        throw new NodoNoEncontrado();
+        throw NodoNoEncontrado();
 }
 
 template<class T>
@@ -133,7 +133,7 @@ void Contenedor<T>::eliminar(int i) {
         delete aBorrar;
     }
     else {
-        throw new ErrorElimiarNodo();
+        throw ErrorElimiarNodo();
     }
 }
 
@@ -149,7 +149,7 @@ void Contenedor<T>::eliminar(Nodo<T>* n) {
         delete aBorrar;
     }
     else {
-        throw new ErrorElimiarNodo();
+        throw ErrorElimiarNodo();
     }
 }
 

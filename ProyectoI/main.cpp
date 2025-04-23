@@ -130,9 +130,15 @@ int main() {
 
 	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
 
-	AdminArchivos::cargarUsuarios(*gestorUsuarios);
+	try {
+		AdminArchivos::cargarUsuarios(*gestorUsuarios);
+		cout << *gestorUsuarios << endl;
+	}
+	catch (ErrorAbrirArchivo &ex){
+		std::cerr << ex.what() << std::endl;
+	}
 
-	cout << *gestorUsuarios << endl;
+	
 
 
     return 0;

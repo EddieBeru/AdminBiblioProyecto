@@ -36,4 +36,8 @@ public:
 	ErrorElimiarNodo() : Excepcion("No se pudo eliminar el nodo") {}
 };
 
+class ErrorAbrirArchivo : public Excepcion {
+public:
+	ErrorAbrirArchivo(std::string nombre = "") : Excepcion("Error al abrir el archivo: " + nombre) {}
+};
 
