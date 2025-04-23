@@ -1,11 +1,14 @@
 #include "AdminArchivos.h"
 
+#include "GestorPrestamos.h"
+
 enum TipoMaterial {
     TIPO_LIBRO,
     TIPO_REVISTA,
     TIPO_DIGITAL_ENLINEA,
     TIPO_DIGITAL_FISICO,
 };
+
 
 void AdminArchivos::escribir_String(std::ofstream& archivo, const std::string& str) {
     size_t longS = str.size();
@@ -21,41 +24,86 @@ std::string AdminArchivos::leer_String(std::ifstream &archivo) {
     return str;
 }
 
-void AdminArchivos::des_Libro(std::ofstream &archivo, const Libro *libro) {
+void AdminArchivos::ser_Material(std::ofstream &archivo, const Material *material) {
+    TipoMaterial tipo;
 
-    TipoMaterial tipo = TIPO_LIBRO;
-
-    int num_Clasificacion = libro->get_num_clasificacion();
-    int num_Catalogo = libro->get_num_catalogo();
+    if (dynamic_cast<const Libro*>(material)) {
+        tipo = TIPO_LIBRO;
+    } else if (dynamic_cast<const Revista*>(material)) {
+        tipo = TIPO_REVISTA;
+    } else if (dynamic_cast<const EnLinea*>(material)) {
+        tipo = TIPO_DIGITAL_ENLINEA;
+    } else if (dynamic_cast<const Fisico*>(material)) {
+        tipo = TIPO_DIGITAL_FISICO;
+    }
 
     archivo.write(reinterpret_cast<const char*>(&tipo), sizeof(tipo));
-
+    int num_Clasificacion = material->get_num_clasificacion();
+    int num_Catalogo = material->get_num_catalogo();
     archivo.write(reinterpret_cast<const char*>(&num_Clasificacion), sizeof(num_Clasificacion));
     archivo.write(reinterpret_cast<const char*>(&num_Catalogo), sizeof(num_Catalogo));
+    escribir_String(archivo, material->get_titulo());
+    escribir_String(archivo, material->get_autores());
+    escribir_String(archivo, material->get_palabras_clave());
+    escribir_String(archivo, material->get_tipo_material());
+    escribir_String(archivo, material->get_estado_material());
+}
 
-    escribir_String(archivo, libro->get_titulo());
-    escribir_String(archivo, libro->get_autores());
-    escribir_String(archivo, libro->get_palabras_clave());
-    escribir_String(archivo, libro->get_tipo_material());
-    escribir_String(archivo, libro->get_estado_material());
+void AdminArchivos::des_Material(std::ifstream &archivo, DatosMaterial &datos){
+    archivo.read(reinterpret_cast<char*>(&datos.numClasificacion), sizeof(datos.numClasificacion));
+    archivo.read(reinterpret_cast<char*>(&datos.numCatalogo), sizeof(datos.numCatalogo));
+    datos.titulo = leer_String(archivo);
+    datos.autores = leer_String(archivo);
+    datos.palabrasClave = leer_String(archivo);
+    datos.tipoMaterial = leer_String(archivo);
+    datos.estadoMaterial = leer_String(archivo);
+}
+
+void AdminArchivos::ser_Libro(std::ofstream &archivo, const Libro *libro) {
+    ser_Material(archivo,libro);
     escribir_String(archivo, libro->get_ubicacion());
 }
 
-Libro *AdminArchivos::ser_Libro(std::ifstream &archivo) {
-    int num_Clasificacion, num_Catalogo;
-
-    archivo.read(reinterpret_cast<char*>(&num_Clasificacion), sizeof(int));
-    archivo.read(reinterpret_cast<char*>(&num_Catalogo), sizeof(int));
-
-    std::string titulo = leer_String(archivo);
-    std::string autores = leer_String(archivo);
-    std::string palabras_clave = leer_String(archivo);
-    std::string tipo_material = leer_String(archivo);
-    std::string estado_material = leer_String(archivo);
+Material *AdminArchivos::des_Libro(std::ifstream &archivo) {
+    DatosMaterial datos;
+    des_Material(archivo, datos);
     std::string ubicacion = leer_String(archivo);
-
-    return new Libro(num_Clasificacion, num_Catalogo, titulo, autores, palabras_clave, tipo_material, estado_material, ubicacion);
+    return new Libro(datos.numClasificacion, datos.numCatalogo, datos.titulo, datos.autores, datos.palabrasClave, datos.tipoMaterial, datos.estadoMaterial, ubicacion);
 }
+
+void AdminArchivos::ser_Revista(std::ofstream &archivo, const Revista *revista) {
+
+}
+
+Material *AdminArchivos::des_Revista(std::ifstream &archivo) {
+
+}
+
+void AdminArchivos::ser_MaterialDigital(std::ofstream &archivo, const MaterialDigital *material) {
+
+}
+
+Material *AdminArchivos::des_MaterialDigital(std::ifstream &archivo) {
+
+}
+
+void AdminArchivos::ser_EnLinea(std::ofstream &archivo, const EnLinea *enlinea) {
+
+}
+
+Material *AdminArchivos::des_EnLinea(std::ifstream &archivo) {
+
+}
+
+void AdminArchivos::ser_Fisico(std::ofstream &archivo, const Fisico *fisico) {
+
+}
+
+Material *AdminArchivos::des_Fisico(std::ifstream &archivo) {
+
+}
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -71,7 +119,7 @@ void AdminArchivos::guardarMateriales(GestorMateriales &gestor) {
         Material* material = gestor.obtener_material(i);
 
         if (Libro* libro = dynamic_cast<Libro*>(material)) {
-            des_Libro(archivo, libro);
+            ser_Libro(archivo, libro);
         }
     }
     archivo.close();
@@ -91,8 +139,18 @@ void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
     TipoMaterial tipo;
 
     while (archivo.read(reinterpret_cast<char*>(&tipo), sizeof(tipo))) {
+        Material* mat = nullptr;
 
+            switch (tipo) {
+                case TIPO_LIBRO:
+                    mat = des_Libro(archivo);
+                    break;
+            }
+        if (mat) {
+            gestor.agregarMaterial(mat);
+        }
     }
+    archivo.close();
 }
 
 void AdminArchivos::cargarUsuarios(GestorUsuarios &gestor) {

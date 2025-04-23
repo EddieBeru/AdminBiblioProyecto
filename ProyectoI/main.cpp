@@ -131,20 +131,20 @@ int main() {
 
 	GestorMateriales* gestor = new GestorMateriales();
 
-	Material *matEj = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	//Material *matEj = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
 
-	gestor->agregarMaterial(matEj);
-
-	std::cout << *gestor << std::endl;
-
-	AdminArchivos::guardarMateriales(*gestor);
-
-	//AdminArchivos::cargarMateriales(*gestor);
+	//->agregarMaterial(matEj);
 
 	//std::cout << *gestor << std::endl;
 
+	//AdminArchivos::guardarMateriales(*gestor);
+
+	AdminArchivos::cargarMateriales(*gestor);
+
+	std::cout << *gestor << std::endl;
+
 	delete gestor;
-	delete matEj;
+	//delete matEj;
 
     return 0;
 }

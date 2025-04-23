@@ -30,4 +30,6 @@ add_executable(ProyectoI main.cpp
         Controlador/GestorPrestamos.h
         Controlador/AdminArchivos.cpp
         Controlador/AdminArchivos.h
-        Modelo/Excepciones.h)
+        Modelo/Excepciones.h
+        Modelo/Serializacion.cpp
+        Modelo/Serializacion.h)
