@@ -11,7 +11,6 @@ enum TipoMaterial {
     TIPO_DIGITAL_FISICO,
 };
 
-
 void Serializacion::escribir_String(std::ofstream& archivo, const std::string& str) {
     size_t longS = str.size();
     archivo.write(reinterpret_cast<const char*>(&longS), sizeof(longS));
@@ -23,6 +22,7 @@ std::string Serializacion::leer_String(std::ifstream &archivo) {
     archivo.read(reinterpret_cast<char*>(&longS), sizeof(longS));
     std::string str(longS, '\0');
     archivo.read(&str[0], longS);
+
     return str;
 }
 
@@ -44,6 +44,7 @@ void Serializacion::ser_Material(std::ofstream &archivo, const Material *materia
     int num_Catalogo = material->get_num_catalogo();
     archivo.write(reinterpret_cast<const char*>(&num_Clasificacion), sizeof(num_Clasificacion));
     archivo.write(reinterpret_cast<const char*>(&num_Catalogo), sizeof(num_Catalogo));
+
     escribir_String(archivo, material->get_titulo());
     escribir_String(archivo, material->get_autores());
     escribir_String(archivo, material->get_palabras_clave());
@@ -52,8 +53,10 @@ void Serializacion::ser_Material(std::ofstream &archivo, const Material *materia
 }
 
 void Serializacion::des_Material(std::ifstream &archivo, DatosMaterial &datos){
+
     archivo.read(reinterpret_cast<char*>(&datos.numClasificacion), sizeof(datos.numClasificacion));
     archivo.read(reinterpret_cast<char*>(&datos.numCatalogo), sizeof(datos.numCatalogo));
+
     datos.titulo = leer_String(archivo);
     datos.autores = leer_String(archivo);
     datos.palabrasClave = leer_String(archivo);
@@ -70,39 +73,96 @@ Material *Serializacion::des_Libro(std::ifstream &archivo) {
     DatosMaterial datos;
     des_Material(archivo, datos);
     std::string ubicacion = leer_String(archivo);
-    return new Libro(datos.numClasificacion, datos.numCatalogo, datos.titulo, datos.autores, datos.palabrasClave, datos.tipoMaterial, datos.estadoMaterial, ubicacion);
+
+    return new Libro(datos.numClasificacion,
+        datos.numCatalogo,
+        datos.titulo,
+        datos.autores,
+        datos.palabrasClave,
+        datos.tipoMaterial,
+        datos.estadoMaterial,
+        ubicacion);
 }
 
 void Serializacion::ser_Revista(std::ofstream &archivo, const Revista *revista) {
-
+    ser_Material(archivo,revista);
+    int volumen = revista->get_volumen();
+    int numero = revista->get_numero();
+    archivo.write(reinterpret_cast<const char*>(&volumen), sizeof(volumen));
+    archivo.write(reinterpret_cast<const char*>(&numero), sizeof(numero));
+    escribir_String(archivo, revista->get_ubicacion());
 }
 
 Material *Serializacion::des_Revista(std::ifstream &archivo) {
+    DatosMaterial datos;
+    des_Material(archivo, datos);
+    int volumen;
+    int numero;
+    archivo.read(reinterpret_cast<char*>(&volumen), sizeof(volumen));
+    archivo.read(reinterpret_cast<char*>(&numero), sizeof(numero));
+    std::string ubicacion = leer_String(archivo);
 
+    return new Revista(datos.numClasificacion,
+        datos.numCatalogo,
+        datos.titulo,
+        datos.autores,
+        datos.palabrasClave,
+        datos.tipoMaterial,
+        datos.estadoMaterial,
+        ubicacion, numero, volumen);
 }
 
 void Serializacion::ser_MaterialDigital(std::ofstream &archivo, const MaterialDigital *material) {
+    ser_Material(archivo, material);
+    escribir_String(archivo, material->get_tipo_formato());
 
+    if (dynamic_cast<const EnLinea*>(material)) {
+
+        bool acceso = dynamic_cast<const EnLinea*>(material)->get_acceso();
+        archivo.write(reinterpret_cast<const char*>(&acceso), sizeof(acceso));
+
+    } else if (dynamic_cast<const Fisico*>(material)) {
+
+        std::string estilo_formato = dynamic_cast<const Fisico*>(material)->get_estilo_formato();
+        escribir_String(archivo, estilo_formato);
+
+    } else {
+        throw;
+    }
 }
 
-Material *Serializacion::des_MaterialDigital(std::ifstream &archivo) {
-
+Material* Serializacion::des_MaterialDigital(std::ifstream& archivo) {
+    DatosMaterial datos;
+    des_Material(archivo, datos);
+    std::string tipo_formato = leer_String(archivo);
+    bool acceso;
+    std::string estilo_formato;
+    if (tipo_formato == "EnLinea") {
+        archivo.read(reinterpret_cast<char*>(&acceso), sizeof(acceso));
+        return new EnLinea(datos.numClasificacion,
+            datos.numCatalogo,
+            datos.titulo,
+            datos.autores,
+            datos.palabrasClave,
+            datos.tipoMaterial,
+            datos.estadoMaterial,
+            tipo_formato, acceso);
+    } else if (tipo_formato == "Fisico") {
+        estilo_formato = leer_String(archivo);
+        return new Fisico(datos.numClasificacion,
+            datos.numCatalogo,
+            datos.titulo,
+            datos.autores,
+            datos.palabrasClave,
+            datos.tipoMaterial,
+            datos.estadoMaterial,
+            tipo_formato, estilo_formato);
+    } else {
+        throw;
+    }
 }
 
-void Serializacion::ser_EnLinea(std::ofstream &archivo, const EnLinea *enlinea) {
 
-}
 
-Material *Serializacion::des_EnLinea(std::ifstream &archivo) {
-
-}
-
-void Serializacion::ser_Fisico(std::ofstream &archivo, const Fisico *fisico) {
-
-}
-
-Material *Serializacion::des_Fisico(std::ifstream &archivo) {
-
-}
 
 
