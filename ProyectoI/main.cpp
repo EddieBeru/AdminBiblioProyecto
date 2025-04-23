@@ -6,6 +6,7 @@
 #include "Controlador/GestorMateriales.h"
 #include "Controlador/GestorPrestamos.h"
 #include "Controlador/GestorUsuarios.h"
+#include "Controlador/AdminArchivos.h"
 
 int main() {
 	/*
@@ -46,8 +47,7 @@ int main() {
 	std::cout << *contenedor << std::endl;*/
 
 	//prueba de gestor de materiales
-	GestorMateriales* gestor = new GestorMateriales();
-	Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	/*Material* libro = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
 	//Crear revista con datos diferentes al libro
 	Material* revista = new Revista(54321, 98765, "Titulo Revista", "Autor Revista", "Palabra3, Palabra4", "Tipo Revista", "Estado Revista", "Ubicacion Revista", 10, 5);
 	//Crear material digital
@@ -94,9 +94,27 @@ int main() {
 	gestor2->modificarUsuario(12345678, &usuarioModificado);
 	std::cout << *gestor2->buscarPorId(12345678) << std::endl;
 
-	//Para este tipo de casos se necesitaria manejar excepciones
-	gestor2->buscarPorId(222) ? std::cout << *gestor2->buscarPorId(222) << std::endl : std::cout << "Usuario no encontrado" << std::endl;
+	try {
+		if (gestor2->buscarPorId(222)) {
+			std::cout << "Usuario encontrado" << std::endl;
+			std::cout << *gestor2->buscarPorId(222) << std::endl;
+		}
+	}
+	catch (const Excepcion& e) {
+		std::cerr << e.what() << std::endl;
+		//return 1;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Excepción: " << e.what() << std::endl;
+		//return 2;
+	}
+	catch (...) {
+		std::cerr << "Error desconocido." << std::endl;
+		//return 3;
+	}
 
+	AdminArchivos::guardarMateriales(*gestor);
+	AdminArchivos::guardarUsuarios(*gestor2);
 
 	delete gestor;
 	delete gestor2;
@@ -107,6 +125,14 @@ int main() {
 	prestamoGestor->agregarPrestamo(prestamo1);
 
 	std::cout << *prestamoGestor << std::endl;*/
+
+	GestorUsuarios* gestorUsuarios = new GestorUsuarios();
+
+	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
+
+	AdminArchivos::cargarUsuarios(*gestorUsuarios);
+
+	cout << *gestorUsuarios << endl;
 
 
     return 0;

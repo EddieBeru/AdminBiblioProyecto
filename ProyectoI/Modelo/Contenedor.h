@@ -200,7 +200,7 @@ T* Contenedor<T>::find_if(Predicate p) const {
         }
         aux = aux->getSig();
     }
-    throw new NodoNoEncontrado();
+    throw NodoNoEncontrado();
 }
 
 #endif
