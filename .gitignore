@@ -9,3 +9,10 @@
 /.vs/slnx.sqlite
 /.vs/ProyectoI/VSWorkspaceState.json
 /.vs
+/cmake-build-debug/
+
+/cmake-build-debug/.cmake
+/cmake-build-debug/CMakeFiles
+/cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/Makefile
+/cmake-build-debug/Testing
