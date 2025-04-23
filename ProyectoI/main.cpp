@@ -112,7 +112,6 @@ int main() {
 		std::cerr << "Error desconocido." << std::endl;
 		//return 3;
 	}
-
 	AdminArchivos::guardarMateriales(*gestor);
 	AdminArchivos::guardarUsuarios(*gestor2);
 
@@ -126,20 +125,27 @@ int main() {
 
 	std::cout << *prestamoGestor << std::endl;*/
 
-	GestorUsuarios* gestorUsuarios = new GestorUsuarios();
 
 	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
 
-	try {
-		AdminArchivos::cargarUsuarios(*gestorUsuarios);
-		cout << *gestorUsuarios << endl;
-	}
-	catch (ErrorAbrirArchivo &ex){
-		std::cerr << ex.what() << std::endl;
-	}
 
-	
+	GestorMateriales* gestor = new GestorMateriales();
 
+	Material *matEj = new Libro(12345, 67890, "ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+
+	gestor->agregarMaterial(matEj);
+
+	std::cout << *gestor << std::endl;
+
+	AdminArchivos::guardarMateriales(*gestor);
+
+	//AdminArchivos::cargarMateriales(*gestor);
+
+	//std::cout << *gestor << std::endl;
+
+	delete gestor;
+	delete matEj;
 
     return 0;
 }
+

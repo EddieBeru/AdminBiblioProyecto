@@ -1,12 +1,12 @@
 /*
 * (c) 2025
-* EIF204 - Programación 2
+* EIF204 - Programaciï¿½n 2
 * 1er Ciclo - 2025
 * NRC 41372 - Grupo 8
 * Proyecto 1
 * 
-* 6-0499-0591; Bermúdez Ureña, Edie
-* 4-0264-0704; Arias Medía, Roy
+* 6-0499-0591; Bermï¿½dez Ureï¿½a, Edie
+* 4-0264-0704; Arias Medï¿½a, Roy
 * 5-0460-0104; Ugalde, Felipe
 * 
 * Version 1.0.0 2025-04-22
@@ -18,6 +18,15 @@
 #include <fstream>
 
 class AdminArchivos {
+private:
+    //Escritura y lectura de string
+    static void escribir_String(std::ofstream& archivo, const std::string& str);
+    static std::string leer_String(std::ifstream& archivo);
+
+    //Serializaciones de los objetos
+    static void des_Libro(std::ofstream& archivo, const Libro* libro);
+    static Libro* ser_Libro(std::ifstream& archivo);
+
 public:
 
     //metodos guardar
