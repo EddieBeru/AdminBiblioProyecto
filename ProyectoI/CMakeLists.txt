@@ -32,4 +32,15 @@ add_executable(ProyectoI main.cpp
         Controlador/AdminArchivos.h
         Modelo/Excepciones.h
         Modelo/Serializacion.cpp
-        Modelo/Serializacion.h)
+        Modelo/Serializacion.h
+        Vista/MenuPrincipal.h
+        Vista/MenuPrincipal.cpp
+        Vista/MenuMateriales.h
+        Vista/MenuMateriales.cpp
+        Vista/MenuPrestamos.h
+        Vista/MenuPrestamos.cpp
+        Vista/MenuReportes.h
+        Vista/MenuReportes.cpp
+        Vista/MenuUsuarios.h
+        Vista/MenuUsuarios.cpp
+)
