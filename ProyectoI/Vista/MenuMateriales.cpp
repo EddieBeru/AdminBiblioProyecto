@@ -389,3 +389,9 @@ void MenuMateriales::mostrarMateriales() {
 
 //falta por avanzar
 }
+
+
+void MenuMateriales::buscarMaterial() {
+    limpiarPantalla();
+    //falta avanzar
+}

@@ -18,7 +18,7 @@ MenuPrincipal::MenuPrincipal() {
 
 //me falta seguir aca
 menuMateriales=new MenuMateriales(gestorMateriales);
-menuUsuarios=new MenuUsuarios(gestorUsuarios);
+//menuUsuarios=new MenuUsuarios(gestorUsuarios);
 
 
   //cargar
@@ -93,13 +93,13 @@ void MenuPrincipal::mostrarMenuPrincipal() {
         menuMateriales->mostrarMenu();
         break;
       case 2:
-        menuUsuarios->mostrarMenu();
+       // menuUsuarios->mostrarMenu();
         break;
       case 3:
-        menuPrestamos->mostrarMenu();
+       // menuPrestamos->mostrarMenu();
         break;
       case 4:
-        menuReportes->mostrarMenu();
+       // menuReportes->mostrarMenu();
         break;
       case 0:
         std::cout << "Guardando datos...\n";
