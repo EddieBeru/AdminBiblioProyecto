@@ -18,8 +18,9 @@ MenuPrincipal::MenuPrincipal() {
 
 //me falta seguir aca
 menuMateriales=new MenuMateriales(gestorMateriales);
-//menuUsuarios=new MenuUsuarios(gestorUsuarios);
-
+menuUsuarios=new MenuUsuarios(gestorUsuarios);
+//menuPrestamos=new MenuPrestamos(gestorPrestamos, gestorMateriales, gestorUsuarios);
+//=new MenuReportes(gestorMateriales, gestorUsuarios, gestorPrestamos);
 
   //cargar
   cargarDatos();
@@ -93,7 +94,7 @@ void MenuPrincipal::mostrarMenuPrincipal() {
         menuMateriales->mostrarMenu();
         break;
       case 2:
-       // menuUsuarios->mostrarMenu();
+        menuUsuarios->mostrarMenu();
         break;
       case 3:
        // menuPrestamos->mostrarMenu();
