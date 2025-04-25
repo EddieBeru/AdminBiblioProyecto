@@ -22,13 +22,23 @@ private:
   //Metodos de operacion segun menu
   //metodos de agregar
 void agregarMaterial();
+
 void agregarLibro();
 void agregarRevista();
 void agregarDigitalEnLinea();
 void agregarDigitalFisico();
+
+
 //metodos de modificar
+void modificarMaterial();
+void modificarLibro(int numClasificacion);
+void modificarRevista(int numClasificacion);
+void modificarDigitalEnLinea(int numClasificacion);
+void modificarDigitalFisico(int numClasificacion);
 
 //metodos mostrar
+void mostrarMateriales();
+void buscarMaterial();
 
   public:
     MenuMateriales(GestorMateriales *gestorMateriales);

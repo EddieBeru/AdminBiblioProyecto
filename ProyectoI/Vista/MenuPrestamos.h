@@ -15,8 +15,28 @@
 
 class MenuPrestamos {
 private:
-  public:
+  GestorPrestamos* gestorPrestamos;
+  GestorMateriales* gestorMateriales;
+  GestorUsuarios* gestorUsuarios;
 
+  //metodos de soporte o auxiliar
+  void limpiarPantalla();
+  void pausar();
+  int solicitarEntero(const std::string& mensaje);
+  std::string solicitarTexto(const std::string& mensaje);
+
+//hacer algo para las fechas
+
+
+  //metodos de operacion
+  void registrarPrestamo();
+  void registrarDevolucion();
+  void mostrarPrestamos();
+  public:
+MenuPrestamos(GestorPrestamos* prestamos, GestorMateriales* materiales, GestorUsuarios* usuarios);
+  ~MenuPrestamos();
+
+  void mostrarMenu();
 };
 
 

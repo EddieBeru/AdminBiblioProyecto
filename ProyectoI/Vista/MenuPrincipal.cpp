@@ -17,7 +17,12 @@ MenuPrincipal::MenuPrincipal() {
   gestorPrestamos=new GestorPrestamos();
 
 //me falta seguir aca
+menuMateriales=new MenuMateriales(gestorMateriales);
+menuUsuarios=new MenuUsuarios(gestorUsuarios);
 
+
+  //cargar
+  cargarDatos();
 }
 
 MenuPrincipal::~MenuPrincipal() {
@@ -50,4 +55,61 @@ void MenuPrincipal::pausar(){
   std::cout<<"Presione Enter para continuar...."<<std::endl;
   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   std::cin.get();
+}
+
+void MenuPrincipal::iniciar() {
+  mostrarMenuPrincipal();
+}
+
+void MenuPrincipal::mostrarMenuPrincipal() {
+  int opcion;
+  bool salir=false;
+
+  while(!salir) {
+    limpiarPantalla();
+    std::cout << "\n==============================================\n";
+    std::cout << "          SISTEMA DE GESTIÓN DE BIBLIOTECA     \n";
+    std::cout << "==============================================\n";
+    std::cout << "1. Gestión de Materiales\n";
+    std::cout << "2. Gestión de Usuarios\n";
+    std::cout << "3. Gestión de Préstamos\n";
+    std::cout << "4. Reportes\n";
+    std::cout << "0. Salir\n";
+    std::cout << "==============================================\n";
+    std::cout << "Seleccione una opción: ";
+
+    if (!(std::cin >> opcion)) { //por si se ingresa algo fallido
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout<<"Opcion no valida!"<<std::endl;
+      pausar();
+      continue;
+    }
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');//limpia basura si es q quedo
+
+    switch (opcion) {
+      case 1:
+        menuMateriales->mostrarMenu();
+        break;
+      case 2:
+        menuUsuarios->mostrarMenu();
+        break;
+      case 3:
+        menuPrestamos->mostrarMenu();
+        break;
+      case 4:
+        menuReportes->mostrarMenu();
+        break;
+      case 0:
+        std::cout << "Guardando datos...\n";
+        guardarDatos();
+        std::cout << "¡Hasta pronto!\n";
+        salir = true;
+      default:
+        std::cout<<"Opcion no valida!"<<std::endl;
+        pausar();
+        break;
+    }
+  }
 }
