@@ -387,11 +387,64 @@ void MenuMateriales::mostrarMateriales() {
     std::cout << "          MOSTRAR MATERIAL                    \n";
     std::cout << "==============================================\n";
 
-//falta por avanzar
+//hay q ver si hay materiales
+if (gestor->get_lista_materiales()->tamano() == 0) {
+    std::cout<<"no hay materiales agregados\n";
+    pausar();
+    return;
+}
+//mostrar los materiales
+    for (int i=0; i<gestor->get_lista_materiales()->tamano(); i++) {
+        Material* material=gestor->obtener_material(i);
+        std::cout<<"\n----- Material " << (i + 1) << " -----\n";
+        std::cout<<material->imprimir();
+        std::cout<<"-----------------\n";
+    }
+
+pausar();
 }
 
 
 void MenuMateriales::buscarMaterial() {
     limpiarPantalla();
     //falta avanzar
+    std::cout << "\n==============================================\n";
+    std::cout << "          BUSCAR MATERIAL                     \n";
+    std::cout << "==============================================\n";
+    std::cout << "1. Buscar por número de clasificación\n";
+    std::cout << "2. Buscar por título\n";
+    std::cout << "0. Volver\n";
+    std::cout << "==============================================\n";
+
+    int opcion=solicitarEntero("Opcion:");
+
+    switch (opcion) {
+        case 1: {
+            int numeroClasificacion=solicitarEntero("Numero de clasificacion:");
+            try {
+                Material* material=gestor->buscarMaterialPorClasificacion(numeroClasificacion);
+                std::cout<<"material encontrado:\n";
+                std::cout<<material->imprimir();
+            }catch (std::exception& e) {
+                std::cerr<<"Error: "<<e.what()<<std::endl;
+            }
+            break;
+        }
+        case 2: {
+            std::string titulo=solicitarTexto("Titulo:");
+            try {
+                Material* material=gestor->buscarMaterialPorTitulo(titulo);
+                std::cout<<"material encontrado:\n";
+                std::cout<<material->imprimir();
+            }catch (std::exception& e) {
+                std::cerr<<"Error: "<<e.what()<<std::endl;
+            }
+        }
+        case 0:
+            return;
+        default:
+            std::cout<<"Opcion no valida\n";
+            return;
+    }
+    pausar();
 }
