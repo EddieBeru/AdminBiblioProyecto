@@ -147,6 +147,7 @@ void MenuUsuarios::modificarUsuario() {
             std::cout<<"No se pudo modificar Usuario\n";
         }
 
+        delete datosNuevos;
 
     }catch (const std::exception &e) {
         std::cerr<<"Error al modificar: "<<e.what()<<std::endl;

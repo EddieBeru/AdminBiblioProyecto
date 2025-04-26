@@ -147,10 +147,13 @@ int main() {
 
 	//AdminArchivos::guardarMateriales(*gestor);
 
-	AdminArchivos::cargarMateriales(*gestor);
-
-	std::cout << *gestor << std::endl;
-
+	try {
+		AdminArchivos::cargarMateriales(*gestor);
+		std::cout << *gestor << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cerr << "Error al cargar materiales: " << e.what() << std::endl;
+	}
 	GestorUsuarios* gestorUsuarios = new GestorUsuarios();
 	//Usuario* usuarioEj = new Usuario(12345678, "Juan Perez", true);
 	//gestorUsuarios->agregarUsuario(usuarioEj);

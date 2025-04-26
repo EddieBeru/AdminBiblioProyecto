@@ -169,6 +169,10 @@ void Contenedor<T>::eliminar(Nodo<T>* n) {
 
 template <class T>
 std::ostream& operator<<(std::ostream& os, const Contenedor<T>& obj) {
+	if (obj.inicio == nullptr) {
+		os << "\tContenedor vacio" << std::endl;
+		return os;
+	}
 	Nodo<T>* aux = obj.inicio;
 	while (aux != nullptr) {
 		os << *(aux->getItem()) << std::endl;

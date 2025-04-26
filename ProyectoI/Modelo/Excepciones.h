@@ -55,3 +55,21 @@ public:
 	ErrorAbrirArchivo(std::string nombre = "") : Excepcion("Error al abrir el archivo: " + nombre) {}
 };
 
+//Error escribir string
+//Error leer string
+//Error tipo material invalido
+
+class ErrorEscribirString : public Excepcion {
+public:
+	ErrorEscribirString() : Excepcion("Error al guardar datos") {}
+};
+
+class ErrorLeerString : public Excepcion {
+public:
+	ErrorLeerString() : Excepcion("Error al leer datos") {}
+};
+
+class ErrorTipoMaterialInvalido : public Excepcion {
+public:
+	ErrorTipoMaterialInvalido() : Excepcion("Tipo de material invalido") {}
+};
