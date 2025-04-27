@@ -96,7 +96,7 @@ std::string MenuPrestamos::obtenerFechaActual() {
     std::tm* ahora=std::localtime(&t);
 
     std::stringstream ss;
-    ss<<std::setw(2)<<std::setfill('0')<<ahora->tm_mon<<"/"
+    ss<<std::setw(2)<<std::setfill('0')<<ahora->tm_mday<<"/"
       <<std::setw(2)<<std::setfill('0')<<(ahora->tm_mon+1)<<"/"
       <<(ahora->tm_year+1900);
 //devuelve la fecha en dia/mes/anio
