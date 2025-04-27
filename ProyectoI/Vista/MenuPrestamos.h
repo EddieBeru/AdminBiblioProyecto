@@ -41,11 +41,11 @@ private:
   void registrarPrestamo();
   void registrarDevolucion();
   void mostrarPrestamos();
-  public:
-MenuPrestamos(GestorPrestamos* prestamos, GestorMateriales* materiales, GestorUsuarios* usuarios);
-  ~MenuPrestamos();
+public:
+	MenuPrestamos(GestorPrestamos* prestamos, GestorMateriales* materiales, GestorUsuarios* usuarios);
+	~MenuPrestamos();
 
-  void mostrarMenu();
+	void mostrarMenu();
 };
 
 

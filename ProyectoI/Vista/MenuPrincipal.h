@@ -54,6 +54,4 @@ void pausar();
     void mostrarMenuPrincipal();
 };
 
-
-
 #endif //MENUPRINCIPAL_H

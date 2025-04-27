@@ -7,10 +7,10 @@
 #include "Controlador/GestorPrestamos.h"
 #include "Controlador/GestorUsuarios.h"
 #include "Controlador/AdminArchivos.h"
+#include "Vista/MenuPrincipal.h"
 
 int main() {
-	/*
- Libro libro(12345, 67890, "ejemplo titulo","Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
+	/*Libro libro(12345, 67890, "ejemplo titulo","Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "Ubicacion Ejemplo");
 	Revista revista(12345, 67890, "ejemplo titulo","autor ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ubicacion ejenplo", 1, 1);
 	MaterialDigital mdigital(12345, 67890,"ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ejemplo formato");
 	Fisico fisico(12345, 67890,"ejemplo titulo", "Autor Ejemplo", "Palabra1, Palabra2", "Tipo Ejemplo", "Estado Ejemplo", "ejemplo formato", "estilo ejemplo");
@@ -123,7 +123,7 @@ int main() {
 	Prestamo* prestamo1=new Prestamo(*usuario1, *libro, "fecha ejemplo", "fecha Ejemplo");
 	prestamoGestor->agregarPrestamo(prestamo1);
 
-	std::cout << *prestamoGestor << std::endl;*/
+	std::cout << *prestamoGestor << std::endl;
 
 
 	//AdminArchivos::guardarUsuarios(*gestorUsuarios);
@@ -175,5 +175,12 @@ int main() {
 	//delete usuarioEj;
 
     return 0;
+	*/
+
+	MenuPrincipal* menu = new MenuPrincipal();
+	menu->iniciar();
+
+	delete menu;
+	return 0;
 }
 
