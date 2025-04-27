@@ -26,6 +26,9 @@ private:
   std::string solicitarTexto(const std::string& mensaje);
 
 //hacer algo para las fechas
+std::string obtenerFechaActual();
+//metodo para devolver la fecha de devolucion basado en el tipo de material
+std::string calcularFechaDevolucion(Material* material);
 
 
   //metodos de operacion
