@@ -19,11 +19,11 @@ MenuPrincipal::MenuPrincipal() {
 //me falta seguir aca
 menuMateriales=new MenuMateriales(gestorMateriales);
 menuUsuarios=new MenuUsuarios(gestorUsuarios);
-//menuPrestamos=new MenuPrestamos(gestorPrestamos, gestorMateriales, gestorUsuarios);
+menuPrestamos=new MenuPrestamos(gestorPrestamos, gestorMateriales, gestorUsuarios);
 //=new MenuReportes(gestorMateriales, gestorUsuarios, gestorPrestamos);
 
   //cargar
-  cargarDatos();
+  //cargarDatos();
 }
 
 MenuPrincipal::~MenuPrincipal() {
@@ -97,7 +97,7 @@ void MenuPrincipal::mostrarMenuPrincipal() {
         menuUsuarios->mostrarMenu();
         break;
       case 3:
-       // menuPrestamos->mostrarMenu();
+       menuPrestamos->mostrarMenu();
         break;
       case 4:
        // menuReportes->mostrarMenu();
