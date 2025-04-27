@@ -75,7 +75,7 @@ void AdminArchivos::cargarMateriales(GestorMateriales &gestor) {
                     mat = Serializacion::des_MaterialDigital(archivo);
                     break;
                 default:
-                    throw;
+                    throw ErrorTipoMaterialInvalido();
             }
 
         if (mat) {

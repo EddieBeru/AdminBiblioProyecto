@@ -107,6 +107,7 @@ void MenuPrincipal::mostrarMenuPrincipal() {
         guardarDatos();
         std::cout << "¡Hasta pronto!\n";
         salir = true;
+        break;
       default:
         std::cout<<"Opcion no valida!"<<std::endl;
         pausar();
