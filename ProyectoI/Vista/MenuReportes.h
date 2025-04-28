@@ -35,8 +35,8 @@ std::string solicitarTexto(const std::string& mensaje);
 
 
 //metodos para reportes
-//void reporteInventarioMateriales();
-//void reporteUsuarios();
+void reporteInventarioMateriales();
+void reporteUsuarios();
 void reporteMaterialesEnPrestamo();
 void reportePrestamosPorUsuario();
 public:
