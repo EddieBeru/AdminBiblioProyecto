@@ -23,7 +23,7 @@ menuPrestamos=new MenuPrestamos(gestorPrestamos, gestorMateriales, gestorUsuario
 menuReportes=new MenuReportes(gestorMateriales, gestorUsuarios, gestorPrestamos);
 
   //cargar
-  //cargarDatos();
+  cargarDatos();
 }
 
 MenuPrincipal::~MenuPrincipal() {
