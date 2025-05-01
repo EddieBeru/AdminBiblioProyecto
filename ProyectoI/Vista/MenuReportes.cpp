@@ -52,10 +52,10 @@ void MenuReportes::mostrarMenu() {
         std::cout << "1. Reporte de Inventario de materiales\n";
         std::cout << "2. Reporte de Usuarios\n";
         std::cout << "3. Materiales en Prestamo\n";
-        std::cout << "4. Usuarios con Préstamos Activos\n";
-        std::cout << "0. Volver al Menú Principal\n";
+        std::cout << "4. Usuarios con Prestamos Activos\n";
+        std::cout << "0. Volver al Menu Principal\n";
         std::cout << "==============================================\n";
-        std::cout << "Seleccione una opción: ";
+        std::cout << "Seleccione una opcion: ";
 
         if (!(std::cin >> opcion)) {
             std::cin.clear();
@@ -84,7 +84,7 @@ void MenuReportes::mostrarMenu() {
                 volver = true;
             break;
             default:
-                std::cout << "Opción no válida\n";
+                std::cout << "Opcion no válida\n";
             pausar();
             break;
         }
@@ -105,14 +105,14 @@ void MenuReportes::reporteMaterialesEnPrestamo() {
     }
 // Opciones de reporte
     int opcionReporte;
-    std::cout << "1. Reporte general de materiales en préstamo\n";
+    std::cout << "1. Reporte general de materiales en prestamo\n";
     std::cout << "2. Reporte por tipo de material\n";
-    std::cout << "Seleccione una opción: ";
+    std::cout << "Seleccione una opcion: ";
 
     if (!(std::cin >> opcionReporte) || (opcionReporte != 1 && opcionReporte != 2)) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Opción no válida\n";
+        std::cout << "Opción no valida\n";
         pausar();
         return;
     }
@@ -122,8 +122,42 @@ void MenuReportes::reporteMaterialesEnPrestamo() {
     // Si es reporte por tipo de material, solicitar el tipo
     std::string tipoMaterial = "";
     if (opcionReporte == 2) {
-        std::cout << "\nTipos de material disponibles (escrito a como se escribio al añadir el material): Libro, Revista, Artículo, Video, Digital\n";
-        tipoMaterial = solicitarTexto("Ingrese el tipo de material a buscar: ");
+        std::string tipoMaterial;
+        int opcion;
+
+        std::cout << "\nTipos de material disponibles:\n";
+        std::cout << "1. Libro\n";
+        std::cout << "2. Revista\n";
+        std::cout << "3. Artículo\n";
+        std::cout << "4. Video\n";
+        std::cout << "5. Digital\n";
+
+        while (true) {
+            opcion = solicitarEntero("Ingrese el número del tipo de material a buscar: ");
+
+            switch (opcion) {
+                case 1:
+                    tipoMaterial = "Libro";
+                    break;
+                case 2:
+                    tipoMaterial = "Revista";
+                    break;
+                case 3:
+                    tipoMaterial = "Artículo";
+                    break;
+                case 4:
+                    tipoMaterial = "Video";
+                    break;
+                case 5:
+                    tipoMaterial = "Digital";
+                    break;
+                default:
+                    std::cout << "Opción no válida. Intente de nuevo.\n";
+                    pausar();
+                    continue;
+            }
+            break;
+        }
     }
 
     bool hayPrestamos = false;

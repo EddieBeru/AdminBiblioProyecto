@@ -50,15 +50,15 @@ void MenuUsuarios::mostrarMenu() {
     while (!volver) {
         limpiarPantalla();
         std::cout << "\n==============================================\n";
-        std::cout << "          GESTIÓN DE USUARIOS                \n";
+        std::cout << "          GESTION DE USUARIOS                \n";
         std::cout << "==============================================\n";
         std::cout << "1. Agregar Usuario\n";
         std::cout << "2. Modificar Usuario\n";
         std::cout << "3. Mostrar Todos los Usuarios\n";
         std::cout << "4. Buscar Usuario\n";
-        std::cout << "0. Volver al Menú Principal\n";
+        std::cout << "0. Volver al Menu Principal\n";
         std::cout << "==============================================\n";
-        std::cout << "Seleccione una opción: ";
+        std::cout << "Seleccione una opcion: ";
 
         if (!(std::cin >> opcion)) {
             std::cin.clear();
@@ -173,7 +173,7 @@ void MenuUsuarios::mostrarUsuarios() {
     for (int i=0; i<gestor->get_lista_usuarios()->tamano(); i++) {
         Usuario* usuario=gestor->get_usuario(i);
         std::cout << "\n----- Usuario " << (i + 1) << " -----\n";
-        std::cout << "Cédula: " << usuario->getCedula() << "\n";
+        std::cout << "Cedula: " << usuario->getCedula() << "\n";
         std::cout << "Nombre: " << usuario->getNombreCompleto() << "\n";
         std::cout << "Estado: " << usuario->getEstado() << "\n";
         std::cout << "---------------------\n";
@@ -188,13 +188,13 @@ void MenuUsuarios::buscarUsuario() {
     std::cout << "          BUSCAR USUARIO                      \n";
     std::cout << "==============================================\n";
 
-    int cedula=solicitarEntero("Ingrese la cedula del usuario q busca:");
+    int cedula=solicitarEntero("Ingrese la cedula del usuario que busca:");
 
     try {
         Usuario* usuario=gestor->buscarPorId(cedula);
         std::cout<<"Usuario encontrado\n";
 
-        std::cout << "Cédula: " << usuario->getCedula() << "\n";
+        std::cout << "Cedula: " << usuario->getCedula() << "\n";
         std::cout << "Nombre: " << usuario->getNombreCompleto() << "\n";
         std::cout << "Estado: " << usuario->getEstado() << "\n";
     }catch (const std::exception &e) {

@@ -71,9 +71,9 @@ void MenuPrincipal::mostrarMenuPrincipal() {
     std::cout << "\n==============================================\n";
     std::cout << "          SISTEMA DE GESTION DE BIBLIOTECA     \n";
     std::cout << "==============================================\n";
-    std::cout << "1. Gestión de Materiales\n";
-    std::cout << "2. Gestión de Usuarios\n";
-    std::cout << "3. Gestión de Prestamos\n";
+    std::cout << "1. Gestion de Materiales\n";
+    std::cout << "2. Gestion de Usuarios\n";
+    std::cout << "3. Gestion de Prestamos\n";
     std::cout << "4. Reportes\n";
     std::cout << "0. Salir\n";
     std::cout << "==============================================\n";
@@ -105,7 +105,7 @@ void MenuPrincipal::mostrarMenuPrincipal() {
       case 0:
         std::cout << "Guardando datos...\n";
         guardarDatos();
-        std::cout << "¡Hasta pronto!\n";
+        std::cout << "Hasta pronto!\n";
         salir = true;
         break;
       default:
