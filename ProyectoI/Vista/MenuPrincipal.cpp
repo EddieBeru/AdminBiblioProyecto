@@ -69,15 +69,15 @@ void MenuPrincipal::mostrarMenuPrincipal() {
   while(!salir) {
     limpiarPantalla();
     std::cout << "\n==============================================\n";
-    std::cout << "          SISTEMA DE GESTIÓN DE BIBLIOTECA     \n";
+    std::cout << "          SISTEMA DE GESTION DE BIBLIOTECA     \n";
     std::cout << "==============================================\n";
     std::cout << "1. Gestión de Materiales\n";
     std::cout << "2. Gestión de Usuarios\n";
-    std::cout << "3. Gestión de Préstamos\n";
+    std::cout << "3. Gestión de Prestamos\n";
     std::cout << "4. Reportes\n";
     std::cout << "0. Salir\n";
     std::cout << "==============================================\n";
-    std::cout << "Seleccione una opción: ";
+    std::cout << "Seleccione una opcion: ";
 
     if (!(std::cin >> opcion)) { //por si se ingresa algo fallido
       std::cin.clear();

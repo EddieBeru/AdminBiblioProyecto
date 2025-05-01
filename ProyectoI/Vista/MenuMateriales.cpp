@@ -20,7 +20,7 @@ void MenuMateriales::limpiarPantalla() {
 }
 
 void MenuMateriales::pausar() {
-    std::cout<<"Presiones Enter para continuar: ";
+    std::cout<<"Presione Enter para continuar: ";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.get();
 }
@@ -46,6 +46,30 @@ std::string MenuMateriales::solicitarTexto(const std::string &mensaje) {
     std::getline(std::cin, texto);
     return texto;
 }
+
+std::string MenuMateriales::solicitarEstado() {
+    int valor = 0;
+    std::string estado;
+    while (true) {
+        valor = solicitarEntero("Estado del material: \n 1-Buen estado \n 2-Regular \n 3-Mal estado \n1");
+        if (valor == 1) {
+            estado = "Buen estado";
+            break;
+        } else if (valor == 2) {
+            estado = "Regular";
+            break;
+        } else if (valor == 3) {
+            estado = "Mal estado";
+            break;
+        } else {
+            std::cout << "Opcion no valida. Intente de nuevo.\n";
+            pausar();
+        }
+    }
+    return estado;
+}
+
+
 
 void MenuMateriales::mostrarMenu() {
     int opcion;
@@ -105,8 +129,8 @@ void MenuMateriales::agregarMaterial() {
     std::cout << "==============================================\n";
     std::cout << "1. Libro\n";
     std::cout << "2. Revista\n";
-    std::cout << "3. Material Digital En Línea\n";
-    std::cout << "4. Material Digital Físico\n";
+    std::cout << "3. Material Digital En Linea\n";
+    std::cout << "4. Material Digital Fisico\n";
     std::cout << "0. Volver\n";
     std::cout << "==============================================\n";
 
@@ -140,23 +164,23 @@ void MenuMateriales::agregarLibro() {
     std::cout << "          AGREGAR LIBRO                       \n";
     std::cout << "==============================================\n";
 
-    int numClasificacion=solicitarEntero("Numero de clasificaciones:");
-    int numCatalogo=solicitarEntero("Numero de catalogos:");
+    int numClasificacion=solicitarEntero("Numero de clasificacion:");
+    int numCatalogo=solicitarEntero("Numero de catalogo:");
     std::string titulo=solicitarTexto("Titulo:");
     std::string autores=solicitarTexto("Autor:");
-    std::string palabrasClave=solicitarTexto("Palabras Clave (separadas ,):");
-    std::string tipoMaterial=solicitarTexto("Tipo de Material:");
-    std::string estadoMaterial=solicitarTexto("Estado de Material(Disponible/Prestado:");
+    std::string palabrasClave=solicitarTexto("Palabras Clave (separadas por coma):");
+    std::string tipoMaterial=solicitarTexto("Tipo de Material:");//novela, biografia, etc
+    std::string estadoMaterial = solicitarEstado(); //se solicita el estado del material
     std::string ubicacion=solicitarTexto("Ubicacion:");
 
     try {
-        Libro* libro=new Libro(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, ubicacion);
+        Material* libro=new Libro(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, ubicacion);
         gestor->agregarMaterial(libro);
         std::cout<<"Libro ha sido agregado\n";
+        std::cout << libro->imprimir() <<std::endl;
     }catch (const std::exception& e) {
         std::cerr<<"Error al agregar libro: "<<e.what()<<std::endl;
     }
-
     pausar();
 }
 
@@ -170,18 +194,21 @@ void MenuMateriales::agregarRevista() {
     int numCatalogo = solicitarEntero("Numero de catalogo:");
     std::string titulo = solicitarTexto("Titulo:");
     std::string autores = solicitarTexto("Autor:");
-    std::string palabrasClave = solicitarTexto("Palabras clave (separadas ,):");
+    std::string palabrasClave = solicitarTexto("Palabras clave (separadas por coma):");
     std::string tipoMaterial = solicitarTexto("Tipo de material:");
-    std::string estadoMaterial = solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial = solicitarEstado(); //El valor es fijo, puesto a que es un material nuevo
+    //y no debe de tener otro estado que no sea disponible, porque obviamente no se ha prestado
     std::string ubicacion = solicitarTexto("Ubicacion:");
     int numero = solicitarEntero("Numero de la revista:");
     int volumen = solicitarEntero("Volumen de la revista:");
 
     try {
-        Revista* revista = new Revista(numClasificacion, numCatalogo, titulo, autores, palabrasClave,
+        Material* revista = new Revista(numClasificacion, numCatalogo, titulo, autores, palabrasClave,
                                        tipoMaterial, estadoMaterial, ubicacion, numero, volumen);
         gestor->agregarMaterial(revista);
         std::cout << "Revista ha sido agregada\n";
+        std::cout << revista->imprimir() << std::endl;
+
     } catch (const std::exception& e) {
         std::cerr << "Error al agregar revista: " << e.what() << std::endl;
     }
@@ -194,23 +221,38 @@ void MenuMateriales::agregarDigitalEnLinea() {
     std::cout << "\n==============================================\n";
     std::cout << "      AGREGAR MATERIAL DIGITAL EN LINEA       \n";
     std::cout << "==============================================\n";
+    int valor  = 0;
 
     int numClasificacion = solicitarEntero("Numero de clasificacion:");
     int numCatalogo = solicitarEntero("Numero de catalogo:");
     std::string titulo = solicitarTexto("Titulo:");
     std::string autores = solicitarTexto("Autor:");
-    std::string palabrasClave = solicitarTexto("Palabras clave (separadas ,):");
+    std::string palabrasClave = solicitarTexto("Palabras clave (separadas por coma):");
     std::string tipoMaterial = solicitarTexto("Tipo de material:");
-    std::string estadoMaterial = solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial = solicitarEstado();
     std::string tipoFormato= solicitarTexto("Tipo formato:");
+    bool acceso = " ";
 
-    std::string accesoTexto = solicitarTexto("Tiene Acceso? (s/n):"); //s de si, n de no
-    bool acceso =(accesoTexto =="s"  || accesoTexto =="S"); //minuscula o mayuscula de Si, si es alguna de esas se toma como true, sino es false
+    while (true) {
+        valor = solicitarEntero("Acceso: \n 1-Habilitado \n 2-Deshabilitado:");
+
+        if (valor == 1) {
+            acceso = true;
+            break;
+        } else if (valor == 2) {
+            acceso = false;
+            break;
+        } else {
+            std::cout << "Opcion no valida. Intente de nuevo.\n";
+            pausar();
+        }
+    }
 
     try {
-        EnLinea* enLinea = new EnLinea(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, tipoFormato, acceso);
+        Material* enLinea = new EnLinea(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, tipoFormato, acceso);
         gestor->agregarMaterial(enLinea);
         std::cout<<"Material Digital ha sido agregado\n";
+        std::cout << enLinea->imprimir() << std::endl;
     }catch (const std::exception& e) {
         std::cerr << "Error al agregar material digital en linea: " << e.what() << std::endl;
     }
@@ -228,14 +270,15 @@ void MenuMateriales::agregarDigitalFisico() {
     int numCatalogo = solicitarEntero("Numero de catalogo:");
     std::string titulo = solicitarTexto("Titulo:");
     std::string autores = solicitarTexto("Autor:");
-    std::string palabrasClave = solicitarTexto("Palabras clave (separadas ,):");
+    std::string palabrasClave = solicitarTexto("Palabras clave (separadas por coma):");
     std::string tipoMaterial = solicitarTexto("Tipo de material:");
-    std::string estadoMaterial = solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial = solicitarEstado();
     std::string tipoFormato= solicitarTexto("Tipo formato:");
+
     std::string estiloFormato = solicitarTexto("Estilo formato:");
 
     try {
-        Fisico* fisico = new Fisico(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, tipoFormato, estiloFormato);
+        Material* fisico = new Fisico(numClasificacion, numCatalogo, titulo, autores, palabrasClave, tipoMaterial, estadoMaterial, tipoFormato, estiloFormato);
         gestor->agregarMaterial(fisico);
         std::cout<<"Material Digital ha sido agregado\n";
     }catch (const std::exception& e) {
@@ -288,7 +331,7 @@ void MenuMateriales::modificarLibro(int numClasificacion) {
     std::string autores= solicitarTexto("Autor:");
     std::string palabrasClave= solicitarTexto("Palabras clave (separadas ,):");
     std::string tipoMaterial= solicitarTexto("Tipo de material:");
-    std::string estadoMaterial= solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial= solicitarEstado();
     std::string ubicacion= solicitarTexto("Ubicacion:");
 
     try {
@@ -312,7 +355,7 @@ void MenuMateriales::modificarRevista(int numClasificacion) {
     std::string autores= solicitarTexto("Autor:");
     std::string palabrasClave= solicitarTexto("Palabras clave (separadas ,):");
     std::string tipoMaterial= solicitarTexto("Tipo de material:");
-    std::string estadoMaterial= solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial= solicitarEstado();
     std::string ubicacion= solicitarTexto("Ubicacion:");
     int numero = solicitarEntero("Numero de la revista:");
     int volumen = solicitarEntero("Volumen de la revista:");
@@ -338,7 +381,7 @@ void MenuMateriales::modificarDigitalEnLinea(int numClasificacion) {
     std::string autores = solicitarTexto("Autor:");
     std::string palabrasClave = solicitarTexto("Palabras clave (separadas ,):");
     std::string tipoMaterial = solicitarTexto("Tipo de material:");
-    std::string estadoMaterial = solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial = solicitarEstado();
     std::string tipoFormato= solicitarTexto("Tipo formato:");
 
     std::string accesoTexto = solicitarTexto("Tiene Acceso? (s/n):"); //s de si, n de no
@@ -365,7 +408,7 @@ void MenuMateriales::modificarDigitalFisico(int numClasificacion) {
     std::string autores = solicitarTexto("Autor:");
     std::string palabrasClave = solicitarTexto("Palabras clave (separadas ,):");
     std::string tipoMaterial = solicitarTexto("Tipo de material:");
-    std::string estadoMaterial = solicitarTexto("Estado del material (Disponible/Prestado):");
+    std::string estadoMaterial = solicitarEstado();
     std::string tipoFormato= solicitarTexto("Tipo formato:");
     std::string estiloFormato = solicitarTexto("Estilo formato:");
 

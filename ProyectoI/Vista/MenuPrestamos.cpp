@@ -52,14 +52,14 @@ void MenuPrestamos::mostrarMenu() {
     while (!volver) {
         limpiarPantalla();
         std::cout << "\n==============================================\n";
-        std::cout << "          GESTIÓN DE PRÉSTAMOS                \n";
+        std::cout << "          GESTION DE PRESTAMOS                \n";
         std::cout << "==============================================\n";
-        std::cout << "1. Registrar Préstamo\n";
-        std::cout << "2. Registrar Devolución\n";
-        std::cout << "3. Mostrar Préstamos Activos\n";
-        std::cout << "0. Volver al Menú Principal\n";
+        std::cout << "1. Registrar Prestamo\n";
+        std::cout << "2. Registrar Devolucion\n";
+        std::cout << "3. Mostrar Prestamos Activos\n";
+        std::cout << "0. Volver al Menu Principal\n";
         std::cout << "==============================================\n";
-        std::cout << "Seleccione una opción: ";
+        std::cout << "Seleccione una opcion: ";
 
         if (!(std::cin >> opcion)) {
             std::cin.clear();
@@ -136,12 +136,11 @@ std::string MenuPrestamos::calcularFechaDevolucion(Material *material) {
 void MenuPrestamos::registrarPrestamo() {
     limpiarPantalla();
     std::cout << "\n==============================================\n";
-    std::cout << "          REGISTRAR PRÉSTAMO                  \n";
+    std::cout << "          REGISTRAR PRESTAMO                  \n";
     std::cout << "==============================================\n";
 //primero verificaiciones
 //luego obtener la fecha y mostrar la info del prestamo
-//pedir al usuario confirmar el prestamo y crearlo en caso de
-//cambiar el estado del material a Prestado IMPORTANTE
+//pedir al usuario confirmar el prestamo y crearlo en caso de//cambiar el estado del material a Prestado IMPORTANTE
 
 
     //ver si hay materiales agregados
