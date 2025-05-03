@@ -27,7 +27,16 @@ GestorUsuarios::GestorUsuarios() {
 }
 
 void GestorUsuarios::agregarUsuario(Usuario *usuario) {
-    listaUsuarios->agregarFinal(new Nodo<Usuario>(usuario));
+    try {
+        buscarPorId(usuario->getCedula());
+        throw std::runtime_error("El usuario ya existe en la lista.");
+    }
+    catch (NodoNoEncontrado &ex) {
+        listaUsuarios->agregarFinal(new Nodo<Usuario>(usuario));
+    }
+    catch (std::exception& ex) {
+        throw;
+    }
 }
 
 Usuario* GestorUsuarios::buscarPorId(int id) {

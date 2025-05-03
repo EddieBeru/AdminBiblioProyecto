@@ -23,7 +23,16 @@ GestorMateriales::GestorMateriales(){
 }
 
 void GestorMateriales::agregarMaterial(Material *material) {
-    listaMateriales->agregarFinal(new Nodo<Material>(material));
+    try {
+        buscarMaterialPorClasificacion(material->get_num_clasificacion());
+        throw std::runtime_error("El material ya existe en la lista.");
+
+    } catch (NodoNoEncontrado &ex) {
+        listaMateriales->agregarFinal(new Nodo<Material>(material));
+    }
+    catch (std::exception& ex) {
+        throw;
+    }
 }
 
 Material *GestorMateriales::buscarMaterialPorTitulo(const std::string &titulo) const {

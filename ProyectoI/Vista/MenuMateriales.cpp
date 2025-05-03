@@ -60,7 +60,7 @@ std::string MenuMateriales::solicitarEstado() {
     int valor = 0;
     std::string estado;
     while (true) {
-        valor = solicitarEntero("Estado del material: \n 1-Buen estado \n 2-Regular \n 3-Mal estado \n1");
+        valor = solicitarEntero("Estado del material: \n 1-Buen estado \n 2-Regular \n 3-Mal estado \n");
         if (valor == 1) {
             estado = "Buen estado";
             break;
@@ -95,7 +95,7 @@ void MenuMateriales::mostrarMenu() {
         std::cout << "4. Buscar Material\n";
         std::cout << "0. Volver al Menu Principal\n";
         std::cout << "==============================================\n";
-        std::cout << "Seleccione una opción: ";
+        std::cout << "Seleccione una opcion: ";
 
         if (!(std::cin >> opcion)) {
             std::cin.clear();
