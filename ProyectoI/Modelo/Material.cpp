@@ -1,3 +1,16 @@
+/*
+* (c) 2025
+* EIF204 - Programación 2
+* 1er Ciclo - 2025
+* NRC 41372 - Grupo 8
+* Proyecto 1
+*
+* 6-0499-0591; Bermúdez Ureña, Edie
+* 4-0264-0704; Arias Medía, Roy
+* 5-0460-0104; Ugalde, Felipe
+*
+* Version 1.0.0 2025-04-22
+*/
 #include "Material.h"
 
 //Definicion del constructor con valores por defecto
@@ -81,7 +94,7 @@ std::ostream & operator<<(std::ostream &os, const Material &obj) {
     return os << obj.imprimir();
 }
 
-//Sobrecarga de distintos operadores de comparaci�n
+//Sobrecarga de distintos operadores de comparaci�n
 bool operator<(const Material& a, const Material& b) {
     return a.get_titulo() < b.get_titulo();
 }
