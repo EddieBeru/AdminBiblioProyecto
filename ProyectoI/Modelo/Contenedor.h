@@ -153,16 +153,25 @@ void Contenedor<T>::eliminar(int i) {
 
 template<class T>
 void Contenedor<T>::eliminar(Nodo<T>* n) {
+    if (inicio == nullptr || n == nullptr) {
+        throw ErrorElimiarNodo();
+    }
+    if (inicio == n) {
+        Nodo<T>* aBorrar = inicio;
+        inicio = inicio->getSig();
+        delete aBorrar;
+        return;
+    }
+
     Nodo<T>* aux = inicio;
-    while (aux != nullptr && n != aux->getSig()) {
+    while (aux->getSig() != nullptr && aux->getSig() != n) {
         aux = aux->getSig();
     }
-    if (aux != nullptr && aux->getSig() != nullptr) {
-        Nodo<T>* aBorrar = aux->getSig();
-        aux->setSig(aux->getSig()->getSig());
-        delete aBorrar;
-    }
-    else {
+
+    if (aux->getSig() == n) {
+        aux->setSig(n->getSig());
+        delete n;
+    } else {
         throw ErrorElimiarNodo();
     }
 }

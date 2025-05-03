@@ -28,5 +28,13 @@ Contenedor<Prestamo> *GestorPrestamos::get_lista_prestamos() const {
 }
 
 bool GestorPrestamos::eliminarPrestamo(int indice) {
-
+    try {
+        //Nodo<Prestamo>* nodoAEliminar = listaPrestamos->buscar(indice);
+        listaPrestamos->eliminar(listaPrestamos->buscar(indice));// false indica que no se libera la memoria del objeto
+        return true;
+    } catch (NodoNoEncontrado& ex) {
+        return false; // No se encontró el préstamo
+    } catch (std::exception& ex) {
+        throw; // Re-lanzar cualquier otra excepción
+    }
 }
