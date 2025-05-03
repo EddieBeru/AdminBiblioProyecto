@@ -31,7 +31,7 @@ void GestorUsuarios::agregarUsuario(Usuario *usuario) {
         buscarPorId(usuario->getCedula());
         throw std::runtime_error("El usuario ya existe en la lista.");
     }
-    catch (NodoNoEncontrado &ex) {
+    catch (UsuarioNoencontrado &ex) {
         listaUsuarios->agregarFinal(new Nodo<Usuario>(usuario));
     }
     catch (std::exception& ex) {
