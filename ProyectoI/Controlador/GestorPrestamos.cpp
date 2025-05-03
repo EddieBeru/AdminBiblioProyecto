@@ -26,3 +26,7 @@ void GestorPrestamos::agregarPrestamo(Prestamo *prestamo) {
 Contenedor<Prestamo> *GestorPrestamos::get_lista_prestamos() const {
     return listaPrestamos;
 }
+
+bool GestorPrestamos::eliminarPrestamo(int indice) {
+
+}
