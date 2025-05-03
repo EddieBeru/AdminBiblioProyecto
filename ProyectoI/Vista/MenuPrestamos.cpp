@@ -194,8 +194,17 @@ void MenuPrestamos::registrarPrestamo() {
         material=gestorMateriales->buscarMaterialPorClasificacion(numClasificacion);
 
         //ver si esta disponible
-        if (material->get_estado_material() != "Disponible") {
-            std::cout<<"El material no esta disponible\n";
+        bool materialPrestado = false;
+        for (int i = 0; i < gestorPrestamos->get_lista_prestamos()->tamano(); i++) {
+            Prestamo* p = gestorPrestamos->get_lista_prestamos()->buscar(i)->getItem();
+            if (p->get_material()->get_num_clasificacion() == numClasificacion) {
+                materialPrestado = true;
+                break;
+                }
+        }
+
+        if (materialPrestado) {
+            std::cout << "El material ya esta prestado y no esta disponible\n";
             pausar();
             return;
         }
@@ -230,8 +239,7 @@ void MenuPrestamos::registrarPrestamo() {
         //se agrega el prestamo
         gestorPrestamos->agregarPrestamo(nuevoPrestamo);
 
-        //actualiza el estado del material
-        material->set_estado_material("Prestado");
+
 
         std::cout<<"Prestamo ha sido registrado\n";
     }else {
@@ -264,7 +272,7 @@ void MenuPrestamos::registrarDevolucion() {
     //se va a recorrer la lista de prestamos del gestor hasta encontrar q cuadren el numClasificacion y q este activo
     for (int i=0; i<gestorPrestamos->get_lista_prestamos()->tamano(); i++) {
         Prestamo* p=gestorPrestamos->get_lista_prestamos()->buscar(i)->getItem();
-        if (p->get_material()->get_num_clasificacion() == numClasificacion && p->get_material()->get_estado_material() == "Prestado") {
+        if (p->get_material()->get_num_clasificacion() == numClasificacion) {
             prestamo=p;
             indicePrestamo=i;
             break;
@@ -299,9 +307,12 @@ void MenuPrestamos::registrarDevolucion() {
         std::string confirmar=solicitarTexto("Confirma la devolucion del prestamo? (s/n):");
         if (confirmar == "s" || confirmar == "S") {
             //actualiza estado del prestamo
-            prestamo->get_material()->set_estado_material("Disponible");
-
-            std::cout<<"Devolucion registrada\n";
+            //prestamo->get_material()->set_estado_material("Disponible");
+            if (gestorPrestamos->eliminarPrestamo(indicePrestamo)) {
+                std::cout<<"Devolucion registrada\n";
+            }else {
+                std::cout<<"Devolucion error\n";
+            }
         }else {
             std::cout<<"Devolucion cancelada\n";
         }

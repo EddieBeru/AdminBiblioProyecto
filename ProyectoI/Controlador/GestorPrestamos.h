@@ -26,6 +26,7 @@ private:
 GestorPrestamos();
     Contenedor<Prestamo> * get_lista_prestamos() const;
     void agregarPrestamo(Prestamo* prestamo); //agrega un prestamo al contenedor
+    bool eliminarPrestamo(int indice);
     friend std::ostream & operator<<(std::ostream &os, const GestorPrestamos &obj) {
         os << "Lista de prestamos:\n";
         os << *obj.listaPrestamos;
