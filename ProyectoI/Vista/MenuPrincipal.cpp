@@ -36,7 +36,14 @@ menuReportes=new MenuReportes(gestorMateriales, gestorUsuarios, gestorPrestamos)
 }
 
 MenuPrincipal::~MenuPrincipal() {
-  //falta desarrollar
+    //delete todo
+    delete gestorMateriales;
+    delete gestorUsuarios;
+    delete gestorPrestamos;
+	delete menuMateriales;
+	delete menuUsuarios;
+	delete menuPrestamos;
+	delete menuReportes;
 }
 
 void MenuPrincipal::cargarDatos(){
